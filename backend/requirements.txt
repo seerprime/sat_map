@@ -16,5 +16,5 @@ matplotlib
 seaborn
 python-dotenv
 tqdm
-pydantic==2.5.1
+pydantic==2.8.0
 typing-extensions
