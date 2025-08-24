@@ -1,0 +1,1548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SatMap - Environmental Monitoring Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 50%, #2d1b3d 100%);
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            grid-template-rows: 80px 1fr 70px;
+            height: 100vh;
+            position: relative;
+        }
+
+        .dashboard::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(56, 189, 248, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .header {
+            grid-column: 1 / -1;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00ff88, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo i {
+            font-size: 32px;
+            background: linear-gradient(135deg, #00ff88, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-stats {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #00ff88;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            background: rgba(0, 255, 136, 0.1);
+            border-radius: 25px;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #00ff88;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+
+        .sidebar {
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(20px);
+            border-right: 1px solid rgba(0, 255, 136, 0.1);
+            padding: 32px 24px;
+            overflow-y: auto;
+            position: relative;
+            z-index: 5;
+        }
+
+        .sidebar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: rgba(15, 23, 42, 0.5);
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: rgba(0, 255, 136, 0.3);
+            border-radius: 3px;
+        }
+
+        .control-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00ff88, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .control-group {
+            margin-bottom: 24px;
+        }
+
+        .control-label {
+            font-size: 14px;
+            color: #e2e8f0;
+            margin-bottom: 8px;
+            display: block;
+            font-weight: 500;
+        }
+
+        .control-input, .control-select {
+            width: 100%;
+            padding: 14px 16px;
+            background: rgba(30, 41, 59, 0.8);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 12px;
+            color: #ffffff;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .control-input:focus, .control-select:focus {
+            outline: none;
+            border-color: #00ff88;
+            box-shadow: 0 0 0 3px rgba(0, 255, 136, 0.1);
+            background: rgba(30, 41, 59, 0.95);
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #00ff88, #00d97a);
+            color: #000;
+            width: 100%;
+            margin-bottom: 12px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(56, 189, 248, 0.1);
+            color: #38bdf8;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            width: 100%;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(56, 189, 248, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .hotspot-card {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .hotspot-card:hover {
+            background: rgba(30, 41, 59, 0.8);
+            border-color: rgba(0, 255, 136, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .hotspot-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .priority-badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .priority-critical { background: rgba(239, 68, 68, 0.2); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3); }
+        .priority-high { background: rgba(249, 115, 22, 0.2); color: #f97316; border: 1px solid rgba(249, 115, 22, 0.3); }
+        .priority-medium { background: rgba(234, 179, 8, 0.2); color: #eab308; border: 1px solid rgba(234, 179, 8, 0.3); }
+        .priority-low { background: rgba(34, 197, 94, 0.2); color: #22c55e; border: 1px solid rgba(34, 197, 94, 0.3); }
+
+        .hotspot-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .hotspot-stat {
+            text-align: center;
+            padding: 8px;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 8px;
+        }
+
+        .hotspot-stat-value {
+            font-size: 16px;
+            font-weight: 700;
+            color: #00ff88;
+        }
+
+        .hotspot-stat-label {
+            font-size: 11px;
+            color: #94a3b8;
+            text-transform: uppercase;
+        }
+
+        .map-container {
+            position: relative;
+            z-index: 2;
+            border-radius: 0;
+            overflow: hidden;
+        }
+
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+
+        .map-overlay {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .map-control {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 12px;
+            padding: 16px;
+            min-width: 200px;
+        }
+
+        .layer-toggle {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .layer-toggle:last-child {
+            margin-bottom: 0;
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 50px;
+            height: 26px;
+            background: rgba(148, 163, 184, 0.3);
+            border-radius: 13px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-switch.active {
+            background: #00ff88;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.3s;
+        }
+
+        .toggle-switch.active .toggle-slider {
+            transform: translateX(24px);
+        }
+
+        .footer {
+            grid-column: 1 / -1;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(0, 255, 136, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-info {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        .loading-spinner {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(0, 255, 136, 0.3);
+            border-radius: 50%;
+            border-top-color: #00ff88;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .alert-popup {
+            position: fixed;
+            top: 100px;
+            right: 20px;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            max-width: 400px;
+            z-index: 10000;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .upload-zone {
+            border: 2px dashed rgba(0, 255, 136, 0.3);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(30, 41, 59, 0.3);
+        }
+
+        .upload-zone:hover {
+            border-color: #00ff88;
+            background: rgba(0, 255, 136, 0.05);
+        }
+
+        .upload-zone.dragover {
+            border-color: #00ff88;
+            background: rgba(0, 255, 136, 0.1);
+            transform: scale(1.02);
+        }
+
+        /* Custom Leaflet Styling */
+        .leaflet-popup-content-wrapper {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 12px;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        .leaflet-popup-content {
+            color: #ffffff;
+            font-size: 14px;
+        }
+
+        .leaflet-popup-tip {
+            background: rgba(15, 23, 42, 0.95);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .dashboard {
+                grid-template-columns: 300px 1fr;
+            }
+            
+            .header-stats {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+                grid-template-rows: 80px 1fr 70px;
+            }
+            
+            .sidebar {
+                position: fixed;
+                left: -360px;
+                top: 80px;
+                bottom: 70px;
+                width: 360px;
+                z-index: 1000;
+                transition: left 0.3s ease;
+            }
+            
+            .sidebar.open {
+                left: 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+                background: none;
+                border: none;
+                color: #00ff88;
+                font-size: 24px;
+                cursor: pointer;
+            }
+            
+            .header-stats {
+                display: none;
+            }
+        }
+
+        /* Animation for hotspot markers */
+        .hotspot-marker {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-satellite"></i>
+                <span>SatMap</span>
+            </div>
+            
+            <div class="header-stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="totalHotspots">0</div>
+                    <div class="stat-label">Active Hotspots</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="criticalAlerts">0</div>
+                    <div class="stat-label">Critical Alerts</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="areaMonitored">0</div>
+                    <div class="stat-label">km² Monitored</div>
+                </div>
+            </div>
+
+            <div class="header-actions">
+                <div class="status-indicator">
+                    <div class="status-dot"></div>
+                    <span>Live Monitoring</span>
+                </div>
+                <button class="mobile-menu-btn" onclick="toggleSidebar()" style="display: none;">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <aside class="sidebar" id="sidebar">
+            <div class="control-section">
+                <h3 class="section-title">
+                    <i class="fas fa-map-marked-alt"></i>
+                    Map Controls
+                </h3>
+                
+                <div class="control-group">
+                    <label class="control-label">Location Search</label>
+                    <input type="text" class="control-input" id="locationSearch" 
+                           placeholder="Search location..." onkeypress="handleLocationSearch(event)">
+                </div>
+                
+                <div class="control-group">
+                    <label class="control-label">Data Type</label>
+                    <select class="control-select" id="dataType" onchange="updateHeatmap()">
+                        <option value="all">All Environmental Data</option>
+                        <option value="trash">Trash Hotspots</option>
+                        <option value="water">Water Contamination</option>
+                    </select>
+                </div>
+                
+                <div class="control-group">
+                    <label class="control-label">Search Radius (km)</label>
+                    <input type="range" class="control-input" id="radiusSlider" 
+                           min="1" max="50" value="10" oninput="updateRadius(this.value)">
+                    <span id="radiusValue">10 km</span>
+                </div>
+                
+                <button class="btn btn-primary" onclick="refreshData()">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>Refresh Data</span>
+                </button>
+                
+                <button class="btn btn-secondary" onclick="showUploadModal()">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>Upload Image</span>
+                </button>
+            </div>
+
+            <div class="control-section">
+                <h3 class="section-title">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Priority Hotspots
+                </h3>
+                
+                <div id="hotspotsList">
+                    <!-- Hotspots will be populated here -->
+                </div>
+            </div>
+
+            <div class="control-section">
+                <h3 class="section-title">
+                    <i class="fas fa-bell"></i>
+                    Quick Actions
+                </h3>
+                
+                <button class="btn btn-secondary" onclick="createAlert()">
+                    <i class="fas fa-plus"></i>
+                    Create Alert
+                </button>
+                
+                <button class="btn btn-secondary" onclick="deployDrone()">
+                    <i class="fas fa-drone"></i>
+                    Deploy Drone
+                </button>
+            </div>
+        </aside>
+
+        <main class="map-container">
+            <div id="map"></div>
+            
+            <div class="map-overlay">
+                <div class="map-control">
+                    <h4 style="color: #00ff88; margin-bottom: 12px;">Layer Controls</h4>
+                    
+                    <div class="layer-toggle">
+                        <div class="toggle-switch active" onclick="toggleLayer('heatmap', this)">
+                            <div class="toggle-slider"></div>
+                        </div>
+                        <span>Heatmap Overlay</span>
+                    </div>
+                    
+                    <div class="layer-toggle">
+                        <div class="toggle-switch active" onclick="toggleLayer('hotspots', this)">
+                            <div class="toggle-slider"></div>
+                        </div>
+                        <span>Hotspot Markers</span>
+                    </div>
+                    
+                    <div class="layer-toggle">
+                        <div class="toggle-switch" onclick="toggleLayer('contamination', this)">
+                            <div class="toggle-slider"></div>
+                        </div>
+                        <span>Water Contamination</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-info">
+                <span>Last Updated: <span id="lastUpdate">--:--</span></span>
+                <span>Active Connections: <span id="activeConnections">1</span></span>
+                <span id="loadingIndicator" style="display: none;">
+                    <span class="loading-spinner"></span>
+                    Loading data...
+                </span>
+            </div>
+            
+            <div class="footer-info">
+                <span>© 2025 SatMap Environmental Monitoring</span>
+                <span>API Status: <span style="color: #00ff88;">Online</span></span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Upload Modal -->
+    <div id="uploadModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 10000; display: flex; align-items: center; justify-content: center;">
+        <div style="background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(20px); border-radius: 16px; padding: 32px; max-width: 500px; width: 90%;">
+            <h3 style="color: #00ff88; margin-bottom: 20px;">Upload Environmental Image</h3>
+            
+            <div class="upload-zone" onclick="document.getElementById('fileInput').click()">
+                <i class="fas fa-cloud-upload-alt" style="font-size: 48px; color: #00ff88; margin-bottom: 16px;"></i>
+                <p>Click to select or drag & drop your image</p>
+                <p style="font-size: 12px; color: #94a3b8; margin-top: 8px;">Supports JPG, PNG, WebP up to 10MB</p>
+            </div>
+            
+            <input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="handleFileUpload(this.files[0])">
+            
+            <div style="display: flex; gap: 12px; margin-top: 20px;">
+                <button class="btn btn-primary" style="flex: 1;" onclick="processUpload()">
+                    <i class="fas fa-brain"></i>
+                    Analyze with AI
+                </button>
+                <button class="btn btn-secondary" onclick="closeUploadModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <script>
+        // Global variables
+        let map;
+        let heatmapLayer;
+        let hotspotsLayer;
+        let contaminationLayer;
+        let currentData = {
+            hotspots: [],
+            heatmapPoints: [],
+            contamination: []
+        };
+        let currentLocation = { lat: 20.2961, lng: 85.8245 }; // Bhubaneswar
+        let currentRadius = 10;
+
+        // Initialize map
+        function initMap() {
+            map = L.map('map').setView([currentLocation.lat, currentLocation.lng], 12);
+            
+            // Add tile layer with dark theme
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                attribution: '© OpenStreetMap contributors, © CARTO',
+                maxZoom: 19
+            }).addTo(map);
+
+            // Initialize layers
+            hotspotsLayer = L.layerGroup().addTo(map);
+            heatmapLayer = L.layerGroup().addTo(map);
+            contaminationLayer = L.layerGroup().addTo(map);
+
+            // Add map event listeners
+            map.on('moveend', function() {
+                updateMapData();
+            });
+
+            map.on('zoomend', function() {
+                updateMapData();
+            });
+
+            // Load initial data
+            loadInitialData();
+        }
+
+        // Load initial demo data
+        function loadInitialData() {
+            showLoading(true);
+            
+            // Simulate API call delay
+            setTimeout(() => {
+                generateMockHotspots();
+                generateMockHeatmapData();
+                updateUI();
+                showLoading(false);
+                updateLastUpdateTime();
+            }, 1500);
+        }
+
+        // Generate mock hotspot data
+        function generateMockHotspots() {
+            currentData.hotspots = [];
+            
+            const priorities = ['CRITICAL', 'HIGH', 'MEDIUM', 'LOW'];
+            const types = ['plastic_waste', 'organic_waste', 'chemical_spill', 'electronic_waste'];
+            
+            for (let i = 0; i < 25; i++) {
+                const priority = priorities[Math.floor(Math.random() * priorities.length)];
+                const lat = currentLocation.lat + (Math.random() - 0.5) * 0.1;
+                const lng = currentLocation.lng + (Math.random() - 0.5) * 0.1;
+                
+                currentData.hotspots.push({
+                    id: `hotspot_${i + 1}`,
+                    location: { latitude: lat, longitude: lng },
+                    priority_score: Math.floor(Math.random() * 10) + 1,
+                    risk_level: priority,
+                    estimated_items: Math.floor(Math.random() * 200) + 5,
+                    estimated_weight_kg: (Math.random() * 50).toFixed(2),
+                    contamination_types: [types[Math.floor(Math.random() * types.length)]],
+                    cleanup_cost_estimate: (Math.random() * 5000).toFixed(2),
+                    affected_area_m2: Math.floor(Math.random() * 2000) + 50,
+                    distance_from_query_km: (Math.random() * currentRadius).toFixed(2)
+                });
+            }
+            
+            // Sort by priority score
+            currentData.hotspots.sort((a, b) => b.priority_score - a.priority_score);
+        }
+
+        // Generate mock heatmap data
+        function generateMockHeatmapData() {
+            currentData.heatmapPoints = [];
+            
+            for (let i = 0; i < 100; i++) {
+                const lat = currentLocation.lat + (Math.random() - 0.5) * 0.08;
+                const lng = currentLocation.lng + (Math.random() - 0.5) * 0.08;
+                const intensity = Math.random();
+                
+                currentData.heatmapPoints.push([lat, lng, intensity]);
+            }
+        }
+
+        // Update map with current data
+        function updateMapData() {
+            const bounds = map.getBounds();
+            const center = map.getCenter();
+            const zoom = map.getZoom();
+            
+            // Update current location
+            currentLocation = { lat: center.lat, lng: center.lng };
+            
+            // Refresh data based on new bounds
+            setTimeout(() => {
+                generateMockHotspots();
+                generateMockHeatmapData();
+                updateUI();
+            }, 500);
+        }
+
+        // Update UI elements
+        function updateUI() {
+            updateMapLayers();
+            updateSidebar();
+            updateStats();
+        }
+
+        // Update map layers
+        function updateMapLayers() {
+            // Clear existing layers
+            hotspotsLayer.clearLayers();
+            heatmapLayer.clearLayers();
+            contaminationLayer.clearLayers();
+
+            // Add hotspot markers
+            currentData.hotspots.forEach(hotspot => {
+                const marker = createHotspotMarker(hotspot);
+                hotspotsLayer.addLayer(marker);
+            });
+
+            // Add heatmap overlay
+            if (currentData.heatmapPoints.length > 0) {
+                createHeatmapOverlay();
+            }
+
+            // Add contamination zones
+            createContaminationZones();
+        }
+
+        // Create hotspot marker
+        function createHotspotMarker(hotspot) {
+            const color = getPriorityColor(hotspot.risk_level);
+            const size = Math.max(8, Math.min(20, hotspot.priority_score * 2));
+
+            const marker = L.circleMarker(
+                [hotspot.location.latitude, hotspot.location.longitude],
+                {
+                    radius: size,
+                    fillColor: color,
+                    color: '#ffffff',
+                    weight: 2,
+                    opacity: 0.8,
+                    fillOpacity: 0.6,
+                    className: 'hotspot-marker'
+                }
+            );
+
+            // Add popup
+            const popupContent = createHotspotPopup(hotspot);
+            marker.bindPopup(popupContent, { maxWidth: 300 });
+
+            // Add hover effects
+            marker.on('mouseover', function(e) {
+                e.target.setStyle({
+                    weight: 4,
+                    opacity: 1,
+                    fillOpacity: 0.8
+                });
+            });
+
+            marker.on('mouseout', function(e) {
+                e.target.setStyle({
+                    weight: 2,
+                    opacity: 0.8,
+                    fillOpacity: 0.6
+                });
+            });
+
+            return marker;
+        }
+
+        // Create heatmap overlay
+        function createHeatmapOverlay() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const bounds = map.getBounds();
+            const size = map.getSize();
+            
+            canvas.width = size.x;
+            canvas.height = size.y;
+
+            // Create gradient
+            const gradient = ctx.createRadialGradient(0, 0, 0, 0, 0, 50);
+            gradient.addColorStop(0, 'rgba(0, 255, 136, 0.8)');
+            gradient.addColorStop(0.5, 'rgba(56, 189, 248, 0.6)');
+            gradient.addColorStop(1, 'rgba(139, 92, 246, 0.4)');
+
+            currentData.heatmapPoints.forEach(point => {
+                const pixelPoint = map.latLngToContainerPoint([point[0], point[1]]);
+                const intensity = point[2];
+                
+                ctx.save();
+                ctx.globalAlpha = intensity;
+                ctx.fillStyle = gradient;
+                ctx.beginPath();
+                ctx.arc(pixelPoint.x, pixelPoint.y, 20 * intensity, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.restore();
+            });
+
+            const imageOverlay = L.imageOverlay(canvas.toDataURL(), bounds, {
+                opacity: 0.6,
+                interactive: false
+            });
+
+            heatmapLayer.addLayer(imageOverlay);
+        }
+
+        // Create contamination zones
+        function createContaminationZones() {
+            for (let i = 0; i < 5; i++) {
+                const lat = currentLocation.lat + (Math.random() - 0.5) * 0.05;
+                const lng = currentLocation.lng + (Math.random() - 0.5) * 0.05;
+                const radius = Math.random() * 500 + 100;
+
+                const circle = L.circle([lat, lng], {
+                    radius: radius,
+                    color: '#ef4444',
+                    fillColor: '#ef4444',
+                    fillOpacity: 0.3,
+                    weight: 2
+                });
+
+                circle.bindPopup(`
+                    <div style="color: #ffffff;">
+                        <h4 style="color: #ef4444; margin-bottom: 8px;">Water Contamination Zone</h4>
+                        <p><strong>Contamination Level:</strong> ${Math.floor(Math.random() * 100)}%</p>
+                        <p><strong>Affected Radius:</strong> ${Math.round(radius)}m</p>
+                        <p><strong>Risk Level:</strong> ${Math.random() > 0.5 ? 'High' : 'Medium'}</p>
+                    </div>
+                `);
+
+                contaminationLayer.addLayer(circle);
+            }
+        }
+
+        // Update sidebar with hotspots
+        function updateSidebar() {
+            const hotspotsList = document.getElementById('hotspotsList');
+            const topHotspots = currentData.hotspots.slice(0, 5);
+
+            hotspotsList.innerHTML = topHotspots.map(hotspot => `
+                <div class="hotspot-card" onclick="focusOnHotspot('${hotspot.id}')">
+                    <div class="hotspot-header">
+                        <span style="font-weight: 600; color: #e2e8f0;">#${hotspot.id.replace('hotspot_', '')}</span>
+                        <span class="priority-badge priority-${hotspot.risk_level.toLowerCase()}">
+                            ${hotspot.risk_level}
+                        </span>
+                    </div>
+                    
+                    <div class="hotspot-stats">
+                        <div class="hotspot-stat">
+                            <div class="hotspot-stat-value">${hotspot.estimated_items}</div>
+                            <div class="hotspot-stat-label">Items</div>
+                        </div>
+                        <div class="hotspot-stat">
+                            <div class="hotspot-stat-value">${hotspot.estimated_weight_kg}</div>
+                            <div class="hotspot-stat-label">kg</div>
+                        </div>
+                        <div class="hotspot-stat">
+                            <div class="hotspot-stat-value">₹${Math.round(hotspot.cleanup_cost_estimate)}</div>
+                            <div class="hotspot-stat-label">Cost</div>
+                        </div>
+                        <div class="hotspot-stat">
+                            <div class="hotspot-stat-value">${hotspot.distance_from_query_km}</div>
+                            <div class="hotspot-stat-label">km away</div>
+                        </div>
+                    </div>
+                    
+                    <div style="font-size: 12px; color: #94a3b8; margin-top: 8px;">
+                        ${hotspot.contamination_types.join(', ')} • ${hotspot.affected_area_m2}m² affected
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Update header statistics
+        function updateStats() {
+            document.getElementById('totalHotspots').textContent = currentData.hotspots.length;
+            document.getElementById('criticalAlerts').textContent = 
+                currentData.hotspots.filter(h => h.risk_level === 'CRITICAL').length;
+            document.getElementById('areaMonitored').textContent = 
+                Math.round(Math.PI * currentRadius * currentRadius);
+        }
+
+        // Create hotspot popup content
+        function createHotspotPopup(hotspot) {
+            return `
+                <div style="color: #ffffff; min-width: 250px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                        <h4 style="color: #00ff88; margin: 0;">Hotspot #${hotspot.id.replace('hotspot_', '')}</h4>
+                        <span class="priority-badge priority-${hotspot.risk_level.toLowerCase()}">
+                            ${hotspot.risk_level}
+                        </span>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
+                        <div style="text-align: center; padding: 8px; background: rgba(0,255,136,0.1); border-radius: 6px;">
+                            <div style="font-size: 18px; font-weight: 700; color: #00ff88;">${hotspot.estimated_items}</div>
+                            <div style="font-size: 11px; color: #94a3b8;">ITEMS</div>
+                        </div>
+                        <div style="text-align: center; padding: 8px; background: rgba(56,189,248,0.1); border-radius: 6px;">
+                            <div style="font-size: 18px; font-weight: 700; color: #38bdf8;">${hotspot.estimated_weight_kg}kg</div>
+                            <div style="font-size: 11px; color: #94a3b8;">WEIGHT</div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-bottom: 12px;">
+                        <div style="font-size: 12px; color: #94a3b8; margin-bottom: 4px;">CONTAMINATION TYPES</div>
+                        <div style="font-size: 14px; color: #e2e8f0;">${hotspot.contamination_types.join(', ')}</div>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 12px; margin-bottom: 16px;">
+                        <div><strong>Area:</strong> ${hotspot.affected_area_m2}m²</div>
+                        <div><strong>Distance:</strong> ${hotspot.distance_from_query_km}km</div>
+                        <div><strong>Cost:</strong> ₹${Math.round(hotspot.cleanup_cost_estimate)}</div>
+                        <div><strong>Priority:</strong> ${hotspot.priority_score}/10</div>
+                    </div>
+                    
+                    <div style="display: flex; gap: 8px;">
+                        <button onclick="createAlertForHotspot('${hotspot.id}')" 
+                                style="flex: 1; padding: 8px; background: #00ff88; color: #000; border: none; border-radius: 6px; font-size: 12px; cursor: pointer;">
+                            Create Alert
+                        </button>
+                        <button onclick="deployDroneToHotspot('${hotspot.id}')" 
+                                style="flex: 1; padding: 8px; background: rgba(56,189,248,0.2); color: #38bdf8; border: 1px solid #38bdf8; border-radius: 6px; font-size: 12px; cursor: pointer;">
+                            Deploy Drone
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Utility functions
+        function getPriorityColor(priority) {
+            const colors = {
+                'CRITICAL': '#ef4444',
+                'HIGH': '#f97316',
+                'MEDIUM': '#eab308',
+                'LOW': '#22c55e'
+            };
+            return colors[priority] || '#94a3b8';
+        }
+
+        function showLoading(show) {
+            const indicator = document.getElementById('loadingIndicator');
+            indicator.style.display = show ? 'block' : 'none';
+        }
+
+        function updateLastUpdateTime() {
+            const now = new Date();
+            document.getElementById('lastUpdate').textContent = 
+                now.toLocaleTimeString('en-US', { hour12: false });
+        }
+
+        // Event handlers
+        function focusOnHotspot(hotspotId) {
+            const hotspot = currentData.hotspots.find(h => h.id === hotspotId);
+            if (hotspot) {
+                map.setView([hotspot.location.latitude, hotspot.location.longitude], 16);
+                
+                // Find and open popup
+                hotspotsLayer.eachLayer(layer => {
+                    if (layer.getLatLng().lat === hotspot.location.latitude &&
+                        layer.getLatLng().lng === hotspot.location.longitude) {
+                        layer.openPopup();
+                    }
+                });
+            }
+        }
+
+        function updateRadius(value) {
+            currentRadius = parseInt(value);
+            document.getElementById('radiusValue').textContent = `${value} km`;
+            
+            // Add radius circle to map
+            if (window.radiusCircle) {
+                map.removeLayer(window.radiusCircle);
+            }
+            
+            window.radiusCircle = L.circle([currentLocation.lat, currentLocation.lng], {
+                radius: currentRadius * 1000,
+                color: '#00ff88',
+                fillColor: '#00ff88',
+                fillOpacity: 0.05,
+                weight: 2,
+                dashArray: '5, 5'
+            }).addTo(map);
+            
+            setTimeout(() => {
+                if (window.radiusCircle) {
+                    map.removeLayer(window.radiusCircle);
+                }
+            }, 3000);
+            
+            refreshData();
+        }
+
+        function refreshData() {
+            showLoading(true);
+            setTimeout(() => {
+                generateMockHotspots();
+                generateMockHeatmapData();
+                updateUI();
+                showLoading(false);
+                updateLastUpdateTime();
+                showNotification('Data refreshed successfully', 'success');
+            }, 1000);
+        }
+
+        function updateHeatmap() {
+            const dataType = document.getElementById('dataType').value;
+            showLoading(true);
+            
+            setTimeout(() => {
+                // Simulate different data based on type
+                if (dataType === 'trash') {
+                    generateMockHotspots();
+                    currentData.heatmapPoints = currentData.heatmapPoints.filter((_, i) => i % 2 === 0);
+                } else if (dataType === 'water') {
+                    currentData.hotspots = currentData.hotspots.filter(h => Math.random() > 0.5);
+                    generateMockHeatmapData();
+                } else {
+                    generateMockHotspots();
+                    generateMockHeatmapData();
+                }
+                
+                updateUI();
+                showLoading(false);
+                showNotification(`Showing ${dataType} data`, 'info');
+            }, 800);
+        }
+
+        function handleLocationSearch(event) {
+            if (event.key === 'Enter') {
+                const location = event.target.value;
+                if (location.trim()) {
+                    // Simulate geocoding
+                    showLoading(true);
+                    setTimeout(() => {
+                        // Random location for demo
+                        const newLat = currentLocation.lat + (Math.random() - 0.5) * 0.1;
+                        const newLng = currentLocation.lng + (Math.random() - 0.5) * 0.1;
+                        
+                        currentLocation = { lat: newLat, lng: newLng };
+                        map.setView([newLat, newLng], 12);
+                        
+                        refreshData();
+                        showNotification(`Moved to ${location}`, 'success');
+                    }, 1000);
+                }
+            }
+        }
+
+        function toggleLayer(layerType, toggle) {
+            toggle.classList.toggle('active');
+            
+            switch (layerType) {
+                case 'heatmap':
+                    if (toggle.classList.contains('active')) {
+                        map.addLayer(heatmapLayer);
+                    } else {
+                        map.removeLayer(heatmapLayer);
+                    }
+                    break;
+                case 'hotspots':
+                    if (toggle.classList.contains('active')) {
+                        map.addLayer(hotspotsLayer);
+                    } else {
+                        map.removeLayer(hotspotsLayer);
+                    }
+                    break;
+                case 'contamination':
+                    if (toggle.classList.contains('active')) {
+                        map.addLayer(contaminationLayer);
+                    } else {
+                        map.removeLayer(contaminationLayer);
+                    }
+                    break;
+            }
+        }
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        // API Integration Functions
+        async function createAlert() {
+            const alertData = {
+                alert_type: 'contamination',
+                priority: 'high',
+                location: currentLocation,
+                description: 'Environmental contamination detected through satellite monitoring',
+                detection_data: {
+                    confidence: 0.95,
+                    detected_items: currentData.hotspots.length
+                }
+            };
+
+            try {
+                showLoading(true);
+                // Simulate API call
+                await new Promise(resolve => setTimeout(resolve, 1500));
+                
+                const response = {
+                    success: true,
+                    alert_id: 'ALERT_' + Math.random().toString(36).substr(2, 8).toUpperCase(),
+                    status: 'created',
+                    expected_response_time: '2 hours'
+                };
+
+                showNotification(`Alert created: ${response.alert_id}`, 'success');
+                showAlertPopup(response);
+            } catch (error) {
+                showNotification('Failed to create alert', 'error');
+            } finally {
+                showLoading(false);
+            }
+        }
+
+        async function deployDrone() {
+            const deploymentData = {
+                location: currentLocation,
+                mission_type: 'verification',
+                priority: 'high'
+            };
+
+            try {
+                showLoading(true);
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                
+                const response = {
+                    success: true,
+                    deployment_id: 'DRONE_' + Math.random().toString(36).substr(2, 6).toUpperCase(),
+                    eta: '15 minutes',
+                    selected_drone: {
+                        drone_id: 'SAT-DRONE-001',
+                        type: 'multispectral'
+                    }
+                };
+
+                showNotification(`Drone deployed: ${response.deployment_id}`, 'success');
+                addDroneToMap(response);
+            } catch (error) {
+                showNotification('Failed to deploy drone', 'error');
+            } finally {
+                showLoading(false);
+            }
+        }
+
+        function createAlertForHotspot(hotspotId) {
+            const hotspot = currentData.hotspots.find(h => h.id === hotspotId);
+            if (hotspot) {
+                showNotification(`Creating alert for hotspot ${hotspotId}`, 'info');
+                createAlert();
+            }
+        }
+
+        function deployDroneToHotspot(hotspotId) {
+            const hotspot = currentData.hotspots.find(h => h.id === hotspotId);
+            if (hotspot) {
+                showNotification(`Deploying drone to hotspot ${hotspotId}`, 'info');
+                deployDrone();
+            }
+        }
+
+        // File Upload Functions
+        let selectedFile = null;
+
+        function showUploadModal() {
+            document.getElementById('uploadModal').style.display = 'flex';
+        }
+
+        function closeUploadModal() {
+            document.getElementById('uploadModal').style.display = 'none';
+            selectedFile = null;
+        }
+
+        function handleFileUpload(file) {
+            if (file) {
+                selectedFile = file;
+                showNotification(`File selected: ${file.name}`, 'info');
+            }
+        }
+
+        async function processUpload() {
+            if (!selectedFile) {
+                showNotification('Please select a file first', 'error');
+                return;
+            }
+
+            try {
+                showLoading(true);
+                
+                // Simulate AI processing
+                await new Promise(resolve => setTimeout(resolve, 3000));
+                
+                const results = {
+                    success: true,
+                    detected_items: Math.floor(Math.random() * 50) + 10,
+                    confidence: (Math.random() * 0.3 + 0.7).toFixed(3),
+                    contamination_types: ['plastic_waste', 'organic_waste']
+                };
+
+                closeUploadModal();
+                showNotification(`Analysis complete: ${results.detected_items} items detected`, 'success');
+                
+                // Add results to map
+                addUploadResult(results);
+                
+            } catch (error) {
+                showNotification('Upload failed', 'error');
+            } finally {
+                showLoading(false);
+            }
+        }
+
+        // Utility Functions
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = 'alert-popup';
+            notification.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                    <i class="fas fa-${getNotificationIcon(type)}" style="color: ${getNotificationColor(type)};"></i>
+                    <strong>${type.toUpperCase()}</strong>
+                </div>
+                <p style="margin: 0; color: #e2e8f0;">${message}</p>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.remove();
+            }, 4000);
+        }
+
+        function getNotificationIcon(type) {
+            const icons = {
+                'success': 'check-circle',
+                'error': 'exclamation-circle',
+                'info': 'info-circle',
+                'warning': 'exclamation-triangle'
+            };
+            return icons[type] || 'info-circle';
+        }
+
+        function getNotificationColor(type) {
+            const colors = {
+                'success': '#22c55e',
+                'error': '#ef4444',
+                'info': '#38bdf8',
+                'warning': '#eab308'
+            };
+            return colors[type] || '#38bdf8';
+        }
+
+        function showAlertPopup(alertData) {
+            const popup = document.createElement('div');
+            popup.className = 'alert-popup';
+            popup.innerHTML = `
+                <h4 style="color: #00ff88; margin-bottom: 12px;">Alert Created Successfully</h4>
+                <p><strong>Alert ID:</strong> ${alertData.alert_id}</p>
+                <p><strong>Status:</strong> ${alertData.status}</p>
+                <p><strong>Expected Response:</strong> ${alertData.expected_response_time}</p>
+                <button onclick="this.parentElement.remove()" 
+                        style="margin-top: 12px; padding: 8px 16px; background: #00ff88; color: #000; border: none; border-radius: 6px; cursor: pointer;">
+                    Close
+                </button>
+            `;
+            
+            document.body.appendChild(popup);
+            
+            setTimeout(() => {
+                if (popup.parentElement) {
+                    popup.remove();
+                }
+            }, 8000);
+        }
+
+        function addDroneToMap(droneData) {
+            const droneIcon = L.divIcon({
+                html: '<i class="fas fa-drone" style="color: #00ff88; font-size: 24px;"></i>',
+                iconSize: [30, 30],
+                className: 'drone-marker'
+            });
+            
+            const drone = L.marker([currentLocation.lat, currentLocation.lng], {
+                icon: droneIcon
+            }).addTo(map);
+            
+            drone.bindPopup(`
+                <div style="color: #ffffff;">
+                    <h4 style="color: #00ff88;">Drone Deployment</h4>
+                    <p><strong>ID:</strong> ${droneData.deployment_id}</p>
+                    <p><strong>Type:</strong> ${droneData.selected_drone.type}</p>
+                    <p><strong>ETA:</strong> ${droneData.eta}</p>
+                    <p><strong>Status:</strong> <span style="color: #00ff88;">En Route</span></p>
+                </div>
+            `);
+            
+            // Simulate drone movement
+            let steps = 0;
+            const moveInterval = setInterval(() => {
+                if (steps < 20) {
+                    const newLat = currentLocation.lat + (Math.random() - 0.5) * 0.001;
+                    const newLng = currentLocation.lng + (Math.random() - 0.5) * 0.001;
+                    drone.setLatLng([newLat, newLng]);
+                    steps++;
+                } else {
+                    clearInterval(moveInterval);
+                    map.removeLayer(drone);
+                    showNotification('Drone mission completed', 'success');
+                }
+            }, 500);
+        }
+
+        function addUploadResult(results) {
+            const marker = L.marker([currentLocation.lat, currentLocation.lng], {
+                icon: L.divIcon({
+                    html: '<i class="fas fa-camera" style="color: #38bdf8; font-size: 20px;"></i>',
+                    iconSize: [25, 25],
+                    className: 'upload-marker'
+                })
+            }).addTo(map);
+            
+            marker.bindPopup(`
+                <div style="color: #ffffff;">
+                    <h4 style="color: #38bdf8;">AI Analysis Results</h4>
+                    <p><strong>Items Detected:</strong> ${results.detected_items}</p>
+                    <p><strong>Confidence:</strong> ${(results.confidence * 100).toFixed(1)}%</p>
+                    <p><strong>Types:</strong> ${results.contamination_types.join(', ')}</p>
+                    <p><strong>Status:</strong> <span style="color: #00ff88;">Verified</span></p>
+                </div>
+            `).openPopup();
+        }
+
+        // Drag and Drop for Upload
+        document.addEventListener('DOMContentLoaded', function() {
+            const uploadZone = document.querySelector('.upload-zone');
+            
+            if (uploadZone) {
+                uploadZone.addEventListener('dragover', function(e) {
+                    e.preventDefault();
+                    this.classList.add('dragover');
+                });
+
+                uploadZone.addEventListener('dragleave', function(e) {
+                    e.preventDefault();
+                    this.classList.remove('dragover');
+                });
+
+                uploadZone.addEventListener('drop', function(e) {
+                    e.preventDefault();
+                    this.classList.remove('dragover');
+                    const files = e.dataTransfer.files;
+                    if (files.length > 0) {
+                        handleFileUpload(files[0]);
+                    }
+                });
+            }
+        });
+
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initMap();
+            
+            // Update connection counter
+            setInterval(() => {
+                const connections = Math.floor(Math.random() * 5) + 1;
+                document.getElementById('activeConnections').textContent = connections;
+            }, 30000);
+            
+            // Auto refresh data every 5 minutes
+            setInterval(refreshData, 300000);
+        });
+
+        // Add some CSS animations for enhanced UX
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            
+            .hotspot-card {
+                animation: fadeIn 0.3s ease;
+            }
+            
+            .drone-marker, .upload-marker {
+                animation: bounce 1s infinite;
+            }
+            
+            .leaflet-marker-icon {
+                transition: all 0.3s ease;
+            }
+            
+            .leaflet-marker-icon:hover {
+                transform: scale(1.1);
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

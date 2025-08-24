@@ -2,8 +2,14 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 import uvicorn
+from pathlib import Path
 from routes import upload, map_data, alerts, gamification
 from utils.config import settings
+
+# Base directories
+BASE_DIR = Path(__file__).parent.parent  # Repo root
+FRONTEND_DIR = BASE_DIR / "frontend"
+STATIC_DIR = Path(__file__).parent / "static"
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -23,23 +29,33 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Mount static files
-app.mount("/static", StaticFiles(directory="static"), name="static")
+# Mount backend static folder (optional)
+if STATIC_DIR.exists():
+    app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
+else:
+    print(f"⚠️ Static folder not found at: {STATIC_DIR}")
 
-# Include routers
+# Mount frontend folder at root for SPA + static assets
+if FRONTEND_DIR.exists():
+    app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")
+else:
+    print(f"⚠️ Frontend folder not found at: {FRONTEND_DIR}")
+
+# Include API routers
 app.include_router(upload.router, prefix="/api/upload", tags=["Upload"])
 app.include_router(map_data.router, prefix="/api/map", tags=["Map Data"])
 app.include_router(alerts.router, prefix="/api/alerts", tags=["Alerts"])
 app.include_router(gamification.router, prefix="/api/game", tags=["Gamification"])
 
-@app.get("/")
-async def root():
+# API Root endpoint
+@app.get("/api")
+async def api_root():
     return {
         "message": "🛰 Sat Map API - Environmental Monitoring Platform",
         "version": "1.0.0",
         "features": [
             "AI Trash Detection",
-            "Water Quality Analysis", 
+            "Water Quality Analysis",
             "Risk Assessment",
             "Gamification System",
             "Real-time Alerts"
@@ -53,7 +69,7 @@ async def health_check():
         "status": "healthy",
         "services": {
             "trash_detector": "operational",
-            "water_quality": "operational", 
+            "water_quality": "operational",
             "risk_model": "operational",
             "notification_system": "operational"
         }
