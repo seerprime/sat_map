@@ -37,7 +37,7 @@ else:
 
 # Mount frontend folder at root for SPA + static assets
 if FRONTEND_DIR.exists():
-    app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="frontend")
+    app.mount("/frontend", StaticFiles(directory=FRONTEND_DIR, html=True), name="index.html")
 else:
     print(f"⚠️ Frontend folder not found at: {FRONTEND_DIR}")
 
