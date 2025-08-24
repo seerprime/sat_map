@@ -1,4 +1,5 @@
 # 🛰️ Sat Map - AI-Powered Environmental Monitoring Platform
+deployed at - https://satmapultimate.netlify.app/
 
 <img width="1919" height="1093" alt="image" src="https://github.com/user-attachments/assets/c515211e-c571-4fd6-afce-4117fe7a4838" />
 
