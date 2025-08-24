@@ -1,0 +1,1202 @@
+[
+  {
+    "lat": 20.28768,
+    "lng": 85.780557,
+    "risk_level": "low",
+    "risk_score": 0.82
+  },
+  {
+    "lat": 20.261633,
+    "lng": 85.782286,
+    "risk_level": "medium",
+    "risk_score": 0.49
+  },
+  {
+    "lat": 20.312208,
+    "lng": 85.844144,
+    "risk_level": "low",
+    "risk_score": 0.89
+  },
+  {
+    "lat": 20.340927,
+    "lng": 85.862618,
+    "risk_level": "medium",
+    "risk_score": 0.46
+  },
+  {
+    "lat": 20.303499,
+    "lng": 85.823754,
+    "risk_level": "high",
+    "risk_score": 0.57
+  },
+  {
+    "lat": 20.327896,
+    "lng": 85.77939,
+    "risk_level": "medium",
+    "risk_score": 0.5
+  },
+  {
+    "lat": 20.30082,
+    "lng": 85.808174,
+    "risk_level": "medium",
+    "risk_score": 0.87
+  },
+  {
+    "lat": 20.279057,
+    "lng": 85.838165,
+    "risk_level": "medium",
+    "risk_score": 0.61
+  },
+  {
+    "lat": 20.26982,
+    "lng": 85.777047,
+    "risk_level": "medium",
+    "risk_score": 0.62
+  },
+  {
+    "lat": 20.294521,
+    "lng": 85.866602,
+    "risk_level": "low",
+    "risk_score": 0.52
+  },
+  {
+    "lat": 20.352429,
+    "lng": 85.788576,
+    "risk_level": "low",
+    "risk_score": 0.61
+  },
+  {
+    "lat": 20.276827,
+    "lng": 85.844287,
+    "risk_level": "high",
+    "risk_score": 0.8
+  },
+  {
+    "lat": 20.253428,
+    "lng": 85.776097,
+    "risk_level": "high",
+    "risk_score": 0.41
+  },
+  {
+    "lat": 20.2734,
+    "lng": 85.793723,
+    "risk_level": "critical",
+    "risk_score": 0.47
+  },
+  {
+    "lat": 20.30705,
+    "lng": 85.808009,
+    "risk_level": "low",
+    "risk_score": 0.7
+  },
+  {
+    "lat": 20.259804,
+    "lng": 85.859342,
+    "risk_level": "low",
+    "risk_score": 0.71
+  },
+  {
+    "lat": 20.240686,
+    "lng": 85.768091,
+    "risk_level": "medium",
+    "risk_score": 0.52
+  },
+  {
+    "lat": 20.267191,
+    "lng": 85.868067,
+    "risk_level": "low",
+    "risk_score": 0.74
+  },
+  {
+    "lat": 20.315091,
+    "lng": 85.878029,
+    "risk_level": "high",
+    "risk_score": 0.68
+  },
+  {
+    "lat": 20.348773,
+    "lng": 85.82312,
+    "risk_level": "medium",
+    "risk_score": 0.62
+  },
+  {
+    "lat": 20.325015,
+    "lng": 85.837466,
+    "risk_level": "high",
+    "risk_score": 0.78
+  },
+  {
+    "lat": 20.307466,
+    "lng": 85.776126,
+    "risk_level": "low",
+    "risk_score": 0.56
+  },
+  {
+    "lat": 20.292778,
+    "lng": 85.780941,
+    "risk_level": "medium",
+    "risk_score": 0.86
+  },
+  {
+    "lat": 20.289934,
+    "lng": 85.802212,
+    "risk_level": "medium",
+    "risk_score": 0.59
+  },
+  {
+    "lat": 20.312482,
+    "lng": 85.795582,
+    "risk_level": "high",
+    "risk_score": 0.74
+  },
+  {
+    "lat": 20.34251,
+    "lng": 85.860251,
+    "risk_level": "low",
+    "risk_score": 0.59
+  },
+  {
+    "lat": 20.257688,
+    "lng": 85.865517,
+    "risk_level": "high",
+    "risk_score": 0.51
+  },
+  {
+    "lat": 20.260799,
+    "lng": 85.851955,
+    "risk_level": "medium",
+    "risk_score": 0.71
+  },
+  {
+    "lat": 20.249629,
+    "lng": 85.864012,
+    "risk_level": "medium",
+    "risk_score": 0.81
+  },
+  {
+    "lat": 20.325202,
+    "lng": 85.774143,
+    "risk_level": "medium",
+    "risk_score": 0.79
+  },
+  {
+    "lat": 20.326062,
+    "lng": 85.825894,
+    "risk_level": "medium",
+    "risk_score": 0.45
+  },
+  {
+    "lat": 20.352173,
+    "lng": 85.879527,
+    "risk_level": "high",
+    "risk_score": 0.8
+  },
+  {
+    "lat": 20.312461,
+    "lng": 85.800463,
+    "risk_level": "high",
+    "risk_score": 0.59
+  },
+  {
+    "lat": 20.313299,
+    "lng": 85.870573,
+    "risk_level": "critical",
+    "risk_score": 0.78
+  },
+  {
+    "lat": 20.323068,
+    "lng": 85.854146,
+    "risk_level": "critical",
+    "risk_score": 0.78
+  },
+  {
+    "lat": 20.258365,
+    "lng": 85.872055,
+    "risk_level": "medium",
+    "risk_score": 0.63
+  },
+  {
+    "lat": 20.242598,
+    "lng": 85.811326,
+    "risk_level": "low",
+    "risk_score": 0.45
+  },
+  {
+    "lat": 20.315955,
+    "lng": 85.835522,
+    "risk_level": "low",
+    "risk_score": 0.88
+  },
+  {
+    "lat": 20.24661,
+    "lng": 85.83093,
+    "risk_level": "critical",
+    "risk_score": 0.49
+  },
+  {
+    "lat": 20.328236,
+    "lng": 85.761197,
+    "risk_level": "low",
+    "risk_score": 0.73
+  },
+  {
+    "lat": 20.265903,
+    "lng": 85.86475,
+    "risk_level": "low",
+    "risk_score": 0.86
+  },
+  {
+    "lat": 20.268939,
+    "lng": 85.868572,
+    "risk_level": "medium",
+    "risk_score": 0.52
+  },
+  {
+    "lat": 20.285957,
+    "lng": 85.832522,
+    "risk_level": "low",
+    "risk_score": 0.76
+  },
+  {
+    "lat": 20.316424,
+    "lng": 85.808837,
+    "risk_level": "low",
+    "risk_score": 0.68
+  },
+  {
+    "lat": 20.249915,
+    "lng": 85.866347,
+    "risk_level": "medium",
+    "risk_score": 0.78
+  },
+  {
+    "lat": 20.266559,
+    "lng": 85.811941,
+    "risk_level": "high",
+    "risk_score": 0.79
+  },
+  {
+    "lat": 20.32278,
+    "lng": 85.781188,
+    "risk_level": "medium",
+    "risk_score": 0.74
+  },
+  {
+    "lat": 20.348015,
+    "lng": 85.838969,
+    "risk_level": "low",
+    "risk_score": 0.57
+  },
+  {
+    "lat": 20.255898,
+    "lng": 85.821421,
+    "risk_level": "low",
+    "risk_score": 0.96
+  },
+  {
+    "lat": 20.29162,
+    "lng": 85.815369,
+    "risk_level": "medium",
+    "risk_score": 0.63
+  },
+  {
+    "lat": 20.279207,
+    "lng": 85.765519,
+    "risk_level": "low",
+    "risk_score": 0.73
+  },
+  {
+    "lat": 20.299148,
+    "lng": 85.868627,
+    "risk_level": "low",
+    "risk_score": 0.58
+  },
+  {
+    "lat": 20.302053,
+    "lng": 85.875394,
+    "risk_level": "medium",
+    "risk_score": 0.54
+  },
+  {
+    "lat": 20.27061,
+    "lng": 85.786299,
+    "risk_level": "low",
+    "risk_score": 0.63
+  },
+  {
+    "lat": 20.311064,
+    "lng": 85.850724,
+    "risk_level": "critical",
+    "risk_score": 0.66
+  },
+  {
+    "lat": 20.257373,
+    "lng": 85.873684,
+    "risk_level": "low",
+    "risk_score": 0.91
+  },
+  {
+    "lat": 20.311307,
+    "lng": 85.863553,
+    "risk_level": "high",
+    "risk_score": 0.79
+  },
+  {
+    "lat": 20.259257,
+    "lng": 85.847015,
+    "risk_level": "medium",
+    "risk_score": 0.76
+  },
+  {
+    "lat": 20.332487,
+    "lng": 85.87108,
+    "risk_level": "high",
+    "risk_score": 0.84
+  },
+  {
+    "lat": 20.3467,
+    "lng": 85.778067,
+    "risk_level": "high",
+    "risk_score": 0.97
+  },
+  {
+    "lat": 20.341497,
+    "lng": 85.85483,
+    "risk_level": "high",
+    "risk_score": 0.53
+  },
+  {
+    "lat": 20.299358,
+    "lng": 85.837402,
+    "risk_level": "critical",
+    "risk_score": 0.72
+  },
+  {
+    "lat": 20.262249,
+    "lng": 85.777667,
+    "risk_level": "low",
+    "risk_score": 0.77
+  },
+  {
+    "lat": 20.285244,
+    "lng": 85.859095,
+    "risk_level": "low",
+    "risk_score": 0.76
+  },
+  {
+    "lat": 20.268776,
+    "lng": 85.850796,
+    "risk_level": "medium",
+    "risk_score": 0.84
+  },
+  {
+    "lat": 20.303086,
+    "lng": 85.809261,
+    "risk_level": "low",
+    "risk_score": 0.66
+  },
+  {
+    "lat": 20.322998,
+    "lng": 85.87348,
+    "risk_level": "low",
+    "risk_score": 0.57
+  },
+  {
+    "lat": 20.354128,
+    "lng": 85.762512,
+    "risk_level": "medium",
+    "risk_score": 0.8
+  },
+  {
+    "lat": 20.265749,
+    "lng": 85.874741,
+    "risk_level": "low",
+    "risk_score": 0.86
+  },
+  {
+    "lat": 20.253296,
+    "lng": 85.795713,
+    "risk_level": "low",
+    "risk_score": 0.93
+  },
+  {
+    "lat": 20.334171,
+    "lng": 85.836268,
+    "risk_level": "medium",
+    "risk_score": 0.72
+  },
+  {
+    "lat": 20.277331,
+    "lng": 85.837738,
+    "risk_level": "medium",
+    "risk_score": 0.9
+  },
+  {
+    "lat": 20.356102,
+    "lng": 85.87339,
+    "risk_level": "high",
+    "risk_score": 0.5
+  },
+  {
+    "lat": 20.339307,
+    "lng": 85.76841,
+    "risk_level": "low",
+    "risk_score": 0.45
+  },
+  {
+    "lat": 20.26504,
+    "lng": 85.836869,
+    "risk_level": "medium",
+    "risk_score": 0.75
+  },
+  {
+    "lat": 20.329622,
+    "lng": 85.776302,
+    "risk_level": "low",
+    "risk_score": 0.81
+  },
+  {
+    "lat": 20.26866,
+    "lng": 85.762379,
+    "risk_level": "critical",
+    "risk_score": 0.52
+  },
+  {
+    "lat": 20.304823,
+    "lng": 85.831324,
+    "risk_level": "medium",
+    "risk_score": 0.86
+  },
+  {
+    "lat": 20.30165,
+    "lng": 85.811289,
+    "risk_level": "low",
+    "risk_score": 0.71
+  },
+  {
+    "lat": 20.331445,
+    "lng": 85.860219,
+    "risk_level": "high",
+    "risk_score": 0.64
+  },
+  {
+    "lat": 20.316835,
+    "lng": 85.842631,
+    "risk_level": "low",
+    "risk_score": 0.84
+  },
+  {
+    "lat": 20.284219,
+    "lng": 85.812045,
+    "risk_level": "medium",
+    "risk_score": 0.5
+  },
+  {
+    "lat": 20.300083,
+    "lng": 85.825701,
+    "risk_level": "low",
+    "risk_score": 0.5
+  },
+  {
+    "lat": 20.242425,
+    "lng": 85.856971,
+    "risk_level": "high",
+    "risk_score": 0.83
+  },
+  {
+    "lat": 20.24486,
+    "lng": 85.848088,
+    "risk_level": "medium",
+    "risk_score": 0.96
+  },
+  {
+    "lat": 20.257417,
+    "lng": 85.864191,
+    "risk_level": "low",
+    "risk_score": 0.73
+  },
+  {
+    "lat": 20.345634,
+    "lng": 85.842711,
+    "risk_level": "medium",
+    "risk_score": 0.42
+  },
+  {
+    "lat": 20.246717,
+    "lng": 85.808076,
+    "risk_level": "low",
+    "risk_score": 0.88
+  },
+  {
+    "lat": 20.35078,
+    "lng": 85.773536,
+    "risk_level": "medium",
+    "risk_score": 0.67
+  },
+  {
+    "lat": 20.342133,
+    "lng": 85.802594,
+    "risk_level": "high",
+    "risk_score": 0.84
+  },
+  {
+    "lat": 20.277851,
+    "lng": 85.763469,
+    "risk_level": "medium",
+    "risk_score": 0.5
+  },
+  {
+    "lat": 20.28159,
+    "lng": 85.780168,
+    "risk_level": "medium",
+    "risk_score": 0.61
+  },
+  {
+    "lat": 20.348384,
+    "lng": 85.777141,
+    "risk_level": "high",
+    "risk_score": 0.53
+  },
+  {
+    "lat": 20.353348,
+    "lng": 85.827,
+    "risk_level": "high",
+    "risk_score": 0.96
+  },
+  {
+    "lat": 20.291886,
+    "lng": 85.778276,
+    "risk_level": "medium",
+    "risk_score": 0.52
+  },
+  {
+    "lat": 20.318031,
+    "lng": 85.828052,
+    "risk_level": "high",
+    "risk_score": 0.92
+  },
+  {
+    "lat": 20.338962,
+    "lng": 85.85503,
+    "risk_level": "low",
+    "risk_score": 0.85
+  },
+  {
+    "lat": 20.357372,
+    "lng": 85.826501,
+    "risk_level": "low",
+    "risk_score": 0.66
+  },
+  {
+    "lat": 20.325149,
+    "lng": 85.829304,
+    "risk_level": "low",
+    "risk_score": 0.41
+  },
+  {
+    "lat": 20.334364,
+    "lng": 85.84389,
+    "risk_level": "high",
+    "risk_score": 0.53
+  },
+  {
+    "lat": 20.282259,
+    "lng": 85.815308,
+    "risk_level": "low",
+    "risk_score": 0.91
+  },
+  {
+    "lat": 20.341805,
+    "lng": 85.764917,
+    "risk_level": "medium",
+    "risk_score": 0.78
+  },
+  {
+    "lat": 20.276267,
+    "lng": 85.877197,
+    "risk_level": "critical",
+    "risk_score": 0.4
+  },
+  {
+    "lat": 20.347867,
+    "lng": 85.850763,
+    "risk_level": "low",
+    "risk_score": 0.63
+  },
+  {
+    "lat": 20.274485,
+    "lng": 85.801476,
+    "risk_level": "high",
+    "risk_score": 0.71
+  },
+  {
+    "lat": 20.355475,
+    "lng": 85.783088,
+    "risk_level": "medium",
+    "risk_score": 0.47
+  },
+  {
+    "lat": 20.33736,
+    "lng": 85.789156,
+    "risk_level": "medium",
+    "risk_score": 0.67
+  },
+  {
+    "lat": 20.25999,
+    "lng": 85.760546,
+    "risk_level": "critical",
+    "risk_score": 0.96
+  },
+  {
+    "lat": 20.269846,
+    "lng": 85.850202,
+    "risk_level": "low",
+    "risk_score": 0.74
+  },
+  {
+    "lat": 20.358789,
+    "lng": 85.777873,
+    "risk_level": "medium",
+    "risk_score": 0.78
+  },
+  {
+    "lat": 20.354247,
+    "lng": 85.877365,
+    "risk_level": "high",
+    "risk_score": 0.55
+  },
+  {
+    "lat": 20.341514,
+    "lng": 85.857607,
+    "risk_level": "low",
+    "risk_score": 0.78
+  },
+  {
+    "lat": 20.297527,
+    "lng": 85.845015,
+    "risk_level": "medium",
+    "risk_score": 0.75
+  },
+  {
+    "lat": 20.282061,
+    "lng": 85.836707,
+    "risk_level": "critical",
+    "risk_score": 0.73
+  },
+  {
+    "lat": 20.265724,
+    "lng": 85.788961,
+    "risk_level": "critical",
+    "risk_score": 0.68
+  },
+  {
+    "lat": 20.323546,
+    "lng": 85.792859,
+    "risk_level": "high",
+    "risk_score": 0.79
+  },
+  {
+    "lat": 20.356769,
+    "lng": 85.774317,
+    "risk_level": "critical",
+    "risk_score": 0.49
+  },
+  {
+    "lat": 20.311814,
+    "lng": 85.879562,
+    "risk_level": "low",
+    "risk_score": 0.61
+  },
+  {
+    "lat": 20.350744,
+    "lng": 85.833494,
+    "risk_level": "high",
+    "risk_score": 0.77
+  },
+  {
+    "lat": 20.330833,
+    "lng": 85.875227,
+    "risk_level": "medium",
+    "risk_score": 0.92
+  },
+  {
+    "lat": 20.347782,
+    "lng": 85.822988,
+    "risk_level": "medium",
+    "risk_score": 0.97
+  },
+  {
+    "lat": 20.31386,
+    "lng": 85.872964,
+    "risk_level": "high",
+    "risk_score": 0.81
+  },
+  {
+    "lat": 20.268387,
+    "lng": 85.85459,
+    "risk_level": "high",
+    "risk_score": 0.93
+  },
+  {
+    "lat": 20.356015,
+    "lng": 85.874437,
+    "risk_level": "critical",
+    "risk_score": 0.52
+  },
+  {
+    "lat": 20.284768,
+    "lng": 85.78101,
+    "risk_level": "medium",
+    "risk_score": 0.76
+  },
+  {
+    "lat": 20.255583,
+    "lng": 85.829197,
+    "risk_level": "medium",
+    "risk_score": 0.44
+  },
+  {
+    "lat": 20.359444,
+    "lng": 85.839946,
+    "risk_level": "medium",
+    "risk_score": 0.53
+  },
+  {
+    "lat": 20.289881,
+    "lng": 85.767158,
+    "risk_level": "medium",
+    "risk_score": 0.86
+  },
+  {
+    "lat": 20.352534,
+    "lng": 85.863141,
+    "risk_level": "medium",
+    "risk_score": 0.76
+  },
+  {
+    "lat": 20.34197,
+    "lng": 85.855686,
+    "risk_level": "high",
+    "risk_score": 0.94
+  },
+  {
+    "lat": 20.296993,
+    "lng": 85.802351,
+    "risk_level": "medium",
+    "risk_score": 0.71
+  },
+  {
+    "lat": 20.35247,
+    "lng": 85.779767,
+    "risk_level": "high",
+    "risk_score": 0.55
+  },
+  {
+    "lat": 20.312134,
+    "lng": 85.846068,
+    "risk_level": "critical",
+    "risk_score": 0.41
+  },
+  {
+    "lat": 20.253915,
+    "lng": 85.825924,
+    "risk_level": "medium",
+    "risk_score": 0.6
+  },
+  {
+    "lat": 20.314008,
+    "lng": 85.860419,
+    "risk_level": "medium",
+    "risk_score": 0.8
+  },
+  {
+    "lat": 20.317419,
+    "lng": 85.806718,
+    "risk_level": "high",
+    "risk_score": 0.75
+  },
+  {
+    "lat": 20.267545,
+    "lng": 85.786334,
+    "risk_level": "high",
+    "risk_score": 0.44
+  },
+  {
+    "lat": 20.252539,
+    "lng": 85.793852,
+    "risk_level": "medium",
+    "risk_score": 0.92
+  },
+  {
+    "lat": 20.259781,
+    "lng": 85.803486,
+    "risk_level": "medium",
+    "risk_score": 0.41
+  },
+  {
+    "lat": 20.249091,
+    "lng": 85.810039,
+    "risk_level": "high",
+    "risk_score": 0.95
+  },
+  {
+    "lat": 20.316673,
+    "lng": 85.870371,
+    "risk_level": "medium",
+    "risk_score": 0.93
+  },
+  {
+    "lat": 20.294449,
+    "lng": 85.86722,
+    "risk_level": "high",
+    "risk_score": 0.54
+  },
+  {
+    "lat": 20.317418,
+    "lng": 85.780901,
+    "risk_level": "high",
+    "risk_score": 0.45
+  },
+  {
+    "lat": 20.347817,
+    "lng": 85.807696,
+    "risk_level": "low",
+    "risk_score": 0.47
+  },
+  {
+    "lat": 20.347881,
+    "lng": 85.869963,
+    "risk_level": "high",
+    "risk_score": 0.43
+  },
+  {
+    "lat": 20.337326,
+    "lng": 85.824937,
+    "risk_level": "medium",
+    "risk_score": 0.89
+  },
+  {
+    "lat": 20.315357,
+    "lng": 85.864208,
+    "risk_level": "low",
+    "risk_score": 0.93
+  },
+  {
+    "lat": 20.249775,
+    "lng": 85.871712,
+    "risk_level": "medium",
+    "risk_score": 0.85
+  },
+  {
+    "lat": 20.260206,
+    "lng": 85.86122,
+    "risk_level": "low",
+    "risk_score": 0.87
+  },
+  {
+    "lat": 20.283724,
+    "lng": 85.876863,
+    "risk_level": "medium",
+    "risk_score": 0.41
+  },
+  {
+    "lat": 20.257708,
+    "lng": 85.761508,
+    "risk_level": "low",
+    "risk_score": 0.97
+  },
+  {
+    "lat": 20.314205,
+    "lng": 85.872558,
+    "risk_level": "high",
+    "risk_score": 0.57
+  },
+  {
+    "lat": 20.250527,
+    "lng": 85.876482,
+    "risk_level": "low",
+    "risk_score": 0.5
+  },
+  {
+    "lat": 20.30638,
+    "lng": 85.776448,
+    "risk_level": "medium",
+    "risk_score": 0.92
+  },
+  {
+    "lat": 20.335477,
+    "lng": 85.77584,
+    "risk_level": "critical",
+    "risk_score": 0.72
+  },
+  {
+    "lat": 20.284505,
+    "lng": 85.790518,
+    "risk_level": "high",
+    "risk_score": 0.46
+  },
+  {
+    "lat": 20.297641,
+    "lng": 85.819265,
+    "risk_level": "medium",
+    "risk_score": 0.95
+  },
+  {
+    "lat": 20.306487,
+    "lng": 85.851496,
+    "risk_level": "high",
+    "risk_score": 0.91
+  },
+  {
+    "lat": 20.271569,
+    "lng": 85.85305,
+    "risk_level": "medium",
+    "risk_score": 0.78
+  },
+  {
+    "lat": 20.278179,
+    "lng": 85.795455,
+    "risk_level": "medium",
+    "risk_score": 0.88
+  },
+  {
+    "lat": 20.264328,
+    "lng": 85.872262,
+    "risk_level": "high",
+    "risk_score": 0.61
+  },
+  {
+    "lat": 20.310654,
+    "lng": 85.8276,
+    "risk_level": "high",
+    "risk_score": 0.9
+  },
+  {
+    "lat": 20.340363,
+    "lng": 85.800079,
+    "risk_level": "medium",
+    "risk_score": 0.96
+  },
+  {
+    "lat": 20.266187,
+    "lng": 85.784528,
+    "risk_level": "low",
+    "risk_score": 0.62
+  },
+  {
+    "lat": 20.259644,
+    "lng": 85.783422,
+    "risk_level": "medium",
+    "risk_score": 0.53
+  },
+  {
+    "lat": 20.249079,
+    "lng": 85.832426,
+    "risk_level": "low",
+    "risk_score": 0.43
+  },
+  {
+    "lat": 20.291708,
+    "lng": 85.867348,
+    "risk_level": "low",
+    "risk_score": 0.58
+  },
+  {
+    "lat": 20.28614,
+    "lng": 85.798345,
+    "risk_level": "medium",
+    "risk_score": 0.91
+  },
+  {
+    "lat": 20.271723,
+    "lng": 85.774676,
+    "risk_level": "low",
+    "risk_score": 0.76
+  },
+  {
+    "lat": 20.348627,
+    "lng": 85.772235,
+    "risk_level": "low",
+    "risk_score": 0.91
+  },
+  {
+    "lat": 20.298777,
+    "lng": 85.815026,
+    "risk_level": "high",
+    "risk_score": 0.69
+  },
+  {
+    "lat": 20.25402,
+    "lng": 85.863465,
+    "risk_level": "high",
+    "risk_score": 0.77
+  },
+  {
+    "lat": 20.304811,
+    "lng": 85.851078,
+    "risk_level": "critical",
+    "risk_score": 0.58
+  },
+  {
+    "lat": 20.356078,
+    "lng": 85.77989,
+    "risk_level": "medium",
+    "risk_score": 0.86
+  },
+  {
+    "lat": 20.318573,
+    "lng": 85.869167,
+    "risk_level": "medium",
+    "risk_score": 0.86
+  },
+  {
+    "lat": 20.288152,
+    "lng": 85.833822,
+    "risk_level": "low",
+    "risk_score": 0.91
+  },
+  {
+    "lat": 20.27508,
+    "lng": 85.845003,
+    "risk_level": "high",
+    "risk_score": 0.94
+  },
+  {
+    "lat": 20.300513,
+    "lng": 85.77461,
+    "risk_level": "low",
+    "risk_score": 0.63
+  },
+  {
+    "lat": 20.309208,
+    "lng": 85.798117,
+    "risk_level": "medium",
+    "risk_score": 0.58
+  },
+  {
+    "lat": 20.264187,
+    "lng": 85.846487,
+    "risk_level": "high",
+    "risk_score": 0.94
+  },
+  {
+    "lat": 20.282421,
+    "lng": 85.858071,
+    "risk_level": "high",
+    "risk_score": 0.85
+  },
+  {
+    "lat": 20.352016,
+    "lng": 85.816454,
+    "risk_level": "high",
+    "risk_score": 0.78
+  },
+  {
+    "lat": 20.295741,
+    "lng": 85.800665,
+    "risk_level": "medium",
+    "risk_score": 0.68
+  },
+  {
+    "lat": 20.345467,
+    "lng": 85.778367,
+    "risk_level": "medium",
+    "risk_score": 0.83
+  },
+  {
+    "lat": 20.271218,
+    "lng": 85.835132,
+    "risk_level": "high",
+    "risk_score": 0.87
+  },
+  {
+    "lat": 20.319762,
+    "lng": 85.770138,
+    "risk_level": "high",
+    "risk_score": 0.93
+  },
+  {
+    "lat": 20.257795,
+    "lng": 85.764891,
+    "risk_level": "low",
+    "risk_score": 0.97
+  },
+  {
+    "lat": 20.322338,
+    "lng": 85.879582,
+    "risk_level": "medium",
+    "risk_score": 0.86
+  },
+  {
+    "lat": 20.351234,
+    "lng": 85.761826,
+    "risk_level": "medium",
+    "risk_score": 0.64
+  },
+  {
+    "lat": 20.244327,
+    "lng": 85.831586,
+    "risk_level": "low",
+    "risk_score": 0.88
+  },
+  {
+    "lat": 20.25408,
+    "lng": 85.860783,
+    "risk_level": "medium",
+    "risk_score": 0.94
+  },
+  {
+    "lat": 20.342767,
+    "lng": 85.761832,
+    "risk_level": "medium",
+    "risk_score": 0.86
+  },
+  {
+    "lat": 20.298893,
+    "lng": 85.831244,
+    "risk_level": "medium",
+    "risk_score": 0.74
+  },
+  {
+    "lat": 20.323875,
+    "lng": 85.86502,
+    "risk_level": "medium",
+    "risk_score": 0.63
+  },
+  {
+    "lat": 20.243518,
+    "lng": 85.839794,
+    "risk_level": "critical",
+    "risk_score": 0.53
+  },
+  {
+    "lat": 20.292891,
+    "lng": 85.767049,
+    "risk_level": "medium",
+    "risk_score": 0.58
+  },
+  {
+    "lat": 20.32244,
+    "lng": 85.835779,
+    "risk_level": "high",
+    "risk_score": 0.41
+  },
+  {
+    "lat": 20.247163,
+    "lng": 85.782811,
+    "risk_level": "low",
+    "risk_score": 0.94
+  },
+  {
+    "lat": 20.306932,
+    "lng": 85.846785,
+    "risk_level": "medium",
+    "risk_score": 0.48
+  },
+  {
+    "lat": 20.308006,
+    "lng": 85.867466,
+    "risk_level": "low",
+    "risk_score": 0.72
+  }
+]

@@ -1,0 +1,1202 @@
+[
+  {
+    "lat": 20.301811,
+    "lng": 85.770005,
+    "intensity": 0.67,
+    "type": "trash"
+  },
+  {
+    "lat": 20.24053,
+    "lng": 85.829935,
+    "intensity": 0.95,
+    "type": "trash"
+  },
+  {
+    "lat": 20.341912,
+    "lng": 85.875645,
+    "intensity": 0.73,
+    "type": "trash"
+  },
+  {
+    "lat": 20.255318,
+    "lng": 85.830612,
+    "intensity": 0.89,
+    "type": "trash"
+  },
+  {
+    "lat": 20.264808,
+    "lng": 85.809732,
+    "intensity": 0.82,
+    "type": "trash"
+  },
+  {
+    "lat": 20.261337,
+    "lng": 85.852426,
+    "intensity": 0.71,
+    "type": "trash"
+  },
+  {
+    "lat": 20.307537,
+    "lng": 85.85258,
+    "intensity": 0.84,
+    "type": "trash"
+  },
+  {
+    "lat": 20.341821,
+    "lng": 85.822627,
+    "intensity": 0.61,
+    "type": "trash"
+  },
+  {
+    "lat": 20.323197,
+    "lng": 85.790522,
+    "intensity": 0.76,
+    "type": "trash"
+  },
+  {
+    "lat": 20.336125,
+    "lng": 85.879034,
+    "intensity": 0.83,
+    "type": "trash"
+  },
+  {
+    "lat": 20.328492,
+    "lng": 85.772948,
+    "intensity": 0.86,
+    "type": "trash"
+  },
+  {
+    "lat": 20.322563,
+    "lng": 85.771661,
+    "intensity": 0.66,
+    "type": "trash"
+  },
+  {
+    "lat": 20.350986,
+    "lng": 85.811605,
+    "intensity": 0.73,
+    "type": "trash"
+  },
+  {
+    "lat": 20.317243,
+    "lng": 85.822803,
+    "intensity": 0.81,
+    "type": "trash"
+  },
+  {
+    "lat": 20.35334,
+    "lng": 85.855028,
+    "intensity": 0.85,
+    "type": "trash"
+  },
+  {
+    "lat": 20.273671,
+    "lng": 85.76121,
+    "intensity": 0.61,
+    "type": "trash"
+  },
+  {
+    "lat": 20.258795,
+    "lng": 85.803006,
+    "intensity": 0.83,
+    "type": "trash"
+  },
+  {
+    "lat": 20.332608,
+    "lng": 85.795381,
+    "intensity": 0.67,
+    "type": "trash"
+  },
+  {
+    "lat": 20.351273,
+    "lng": 85.785417,
+    "intensity": 0.76,
+    "type": "trash"
+  },
+  {
+    "lat": 20.277717,
+    "lng": 85.791793,
+    "intensity": 0.97,
+    "type": "trash"
+  },
+  {
+    "lat": 20.27718,
+    "lng": 85.815199,
+    "intensity": 0.72,
+    "type": "trash"
+  },
+  {
+    "lat": 20.274856,
+    "lng": 85.809725,
+    "intensity": 0.72,
+    "type": "trash"
+  },
+  {
+    "lat": 20.309805,
+    "lng": 85.781303,
+    "intensity": 0.68,
+    "type": "trash"
+  },
+  {
+    "lat": 20.328623,
+    "lng": 85.782275,
+    "intensity": 0.91,
+    "type": "trash"
+  },
+  {
+    "lat": 20.266278,
+    "lng": 85.84303,
+    "intensity": 0.82,
+    "type": "trash"
+  },
+  {
+    "lat": 20.242451,
+    "lng": 85.766411,
+    "intensity": 0.66,
+    "type": "trash"
+  },
+  {
+    "lat": 20.297233,
+    "lng": 85.780123,
+    "intensity": 0.77,
+    "type": "trash"
+  },
+  {
+    "lat": 20.265857,
+    "lng": 85.848807,
+    "intensity": 0.69,
+    "type": "trash"
+  },
+  {
+    "lat": 20.264097,
+    "lng": 85.803559,
+    "intensity": 0.94,
+    "type": "trash"
+  },
+  {
+    "lat": 20.24465,
+    "lng": 85.854945,
+    "intensity": 0.95,
+    "type": "trash"
+  },
+  {
+    "lat": 20.269199,
+    "lng": 85.841659,
+    "intensity": 0.7,
+    "type": "trash"
+  },
+  {
+    "lat": 20.269224,
+    "lng": 85.765948,
+    "intensity": 0.97,
+    "type": "trash"
+  },
+  {
+    "lat": 20.336844,
+    "lng": 85.867184,
+    "intensity": 0.78,
+    "type": "trash"
+  },
+  {
+    "lat": 20.286007,
+    "lng": 85.778227,
+    "intensity": 0.83,
+    "type": "trash"
+  },
+  {
+    "lat": 20.340835,
+    "lng": 85.762869,
+    "intensity": 0.64,
+    "type": "trash"
+  },
+  {
+    "lat": 20.32362,
+    "lng": 85.868015,
+    "intensity": 0.82,
+    "type": "trash"
+  },
+  {
+    "lat": 20.273333,
+    "lng": 85.868806,
+    "intensity": 0.86,
+    "type": "trash"
+  },
+  {
+    "lat": 20.335017,
+    "lng": 85.828873,
+    "intensity": 0.61,
+    "type": "trash"
+  },
+  {
+    "lat": 20.292166,
+    "lng": 85.815677,
+    "intensity": 0.63,
+    "type": "trash"
+  },
+  {
+    "lat": 20.305098,
+    "lng": 85.79518,
+    "intensity": 0.6,
+    "type": "trash"
+  },
+  {
+    "lat": 20.337369,
+    "lng": 85.828672,
+    "intensity": 0.82,
+    "type": "trash"
+  },
+  {
+    "lat": 20.295583,
+    "lng": 85.769215,
+    "intensity": 0.65,
+    "type": "trash"
+  },
+  {
+    "lat": 20.303165,
+    "lng": 85.779847,
+    "intensity": 0.81,
+    "type": "trash"
+  },
+  {
+    "lat": 20.266502,
+    "lng": 85.834368,
+    "intensity": 0.92,
+    "type": "trash"
+  },
+  {
+    "lat": 20.282591,
+    "lng": 85.839777,
+    "intensity": 0.77,
+    "type": "trash"
+  },
+  {
+    "lat": 20.299174,
+    "lng": 85.857784,
+    "intensity": 0.69,
+    "type": "trash"
+  },
+  {
+    "lat": 20.342722,
+    "lng": 85.879107,
+    "intensity": 0.62,
+    "type": "trash"
+  },
+  {
+    "lat": 20.258567,
+    "lng": 85.843952,
+    "intensity": 0.63,
+    "type": "trash"
+  },
+  {
+    "lat": 20.321676,
+    "lng": 85.87914,
+    "intensity": 0.71,
+    "type": "trash"
+  },
+  {
+    "lat": 20.297316,
+    "lng": 85.790635,
+    "intensity": 0.82,
+    "type": "trash"
+  },
+  {
+    "lat": 20.326879,
+    "lng": 85.869641,
+    "intensity": 0.84,
+    "type": "trash"
+  },
+  {
+    "lat": 20.325706,
+    "lng": 85.796615,
+    "intensity": 0.65,
+    "type": "trash"
+  },
+  {
+    "lat": 20.27842,
+    "lng": 85.809547,
+    "intensity": 0.62,
+    "type": "trash"
+  },
+  {
+    "lat": 20.244538,
+    "lng": 85.764965,
+    "intensity": 0.69,
+    "type": "trash"
+  },
+  {
+    "lat": 20.344916,
+    "lng": 85.834695,
+    "intensity": 0.94,
+    "type": "trash"
+  },
+  {
+    "lat": 20.264222,
+    "lng": 85.822618,
+    "intensity": 0.77,
+    "type": "trash"
+  },
+  {
+    "lat": 20.359451,
+    "lng": 85.856006,
+    "intensity": 0.77,
+    "type": "trash"
+  },
+  {
+    "lat": 20.315108,
+    "lng": 85.877728,
+    "intensity": 0.8,
+    "type": "trash"
+  },
+  {
+    "lat": 20.251226,
+    "lng": 85.803187,
+    "intensity": 0.93,
+    "type": "trash"
+  },
+  {
+    "lat": 20.354577,
+    "lng": 85.853634,
+    "intensity": 0.64,
+    "type": "trash"
+  },
+  {
+    "lat": 20.278765,
+    "lng": 85.856641,
+    "intensity": 0.78,
+    "type": "trash"
+  },
+  {
+    "lat": 20.30979,
+    "lng": 85.878907,
+    "intensity": 0.63,
+    "type": "trash"
+  },
+  {
+    "lat": 20.292523,
+    "lng": 85.779981,
+    "intensity": 0.96,
+    "type": "trash"
+  },
+  {
+    "lat": 20.244691,
+    "lng": 85.847831,
+    "intensity": 0.87,
+    "type": "trash"
+  },
+  {
+    "lat": 20.351405,
+    "lng": 85.86725,
+    "intensity": 0.89,
+    "type": "trash"
+  },
+  {
+    "lat": 20.33595,
+    "lng": 85.799736,
+    "intensity": 0.88,
+    "type": "trash"
+  },
+  {
+    "lat": 20.268805,
+    "lng": 85.790391,
+    "intensity": 0.93,
+    "type": "trash"
+  },
+  {
+    "lat": 20.314861,
+    "lng": 85.875484,
+    "intensity": 0.61,
+    "type": "trash"
+  },
+  {
+    "lat": 20.312672,
+    "lng": 85.772135,
+    "intensity": 0.96,
+    "type": "trash"
+  },
+  {
+    "lat": 20.328783,
+    "lng": 85.803038,
+    "intensity": 0.61,
+    "type": "trash"
+  },
+  {
+    "lat": 20.249829,
+    "lng": 85.804032,
+    "intensity": 0.68,
+    "type": "trash"
+  },
+  {
+    "lat": 20.291373,
+    "lng": 85.836954,
+    "intensity": 0.94,
+    "type": "trash"
+  },
+  {
+    "lat": 20.322955,
+    "lng": 85.807612,
+    "intensity": 0.74,
+    "type": "trash"
+  },
+  {
+    "lat": 20.247391,
+    "lng": 85.822961,
+    "intensity": 0.79,
+    "type": "trash"
+  },
+  {
+    "lat": 20.327176,
+    "lng": 85.878047,
+    "intensity": 0.91,
+    "type": "trash"
+  },
+  {
+    "lat": 20.348837,
+    "lng": 85.796813,
+    "intensity": 0.75,
+    "type": "trash"
+  },
+  {
+    "lat": 20.303454,
+    "lng": 85.815907,
+    "intensity": 0.64,
+    "type": "trash"
+  },
+  {
+    "lat": 20.320297,
+    "lng": 85.873303,
+    "intensity": 0.84,
+    "type": "trash"
+  },
+  {
+    "lat": 20.266122,
+    "lng": 85.807522,
+    "intensity": 0.77,
+    "type": "trash"
+  },
+  {
+    "lat": 20.351679,
+    "lng": 85.779669,
+    "intensity": 0.77,
+    "type": "trash"
+  },
+  {
+    "lat": 20.242921,
+    "lng": 85.82644,
+    "intensity": 0.84,
+    "type": "trash"
+  },
+  {
+    "lat": 20.275407,
+    "lng": 85.841836,
+    "intensity": 0.76,
+    "type": "trash"
+  },
+  {
+    "lat": 20.299064,
+    "lng": 85.795782,
+    "intensity": 0.91,
+    "type": "trash"
+  },
+  {
+    "lat": 20.343125,
+    "lng": 85.849112,
+    "intensity": 0.69,
+    "type": "trash"
+  },
+  {
+    "lat": 20.352083,
+    "lng": 85.786994,
+    "intensity": 0.73,
+    "type": "trash"
+  },
+  {
+    "lat": 20.300391,
+    "lng": 85.774153,
+    "intensity": 0.62,
+    "type": "trash"
+  },
+  {
+    "lat": 20.25624,
+    "lng": 85.810949,
+    "intensity": 0.6,
+    "type": "trash"
+  },
+  {
+    "lat": 20.34112,
+    "lng": 85.78143,
+    "intensity": 0.6,
+    "type": "trash"
+  },
+  {
+    "lat": 20.31488,
+    "lng": 85.764413,
+    "intensity": 0.91,
+    "type": "trash"
+  },
+  {
+    "lat": 20.240588,
+    "lng": 85.797436,
+    "intensity": 0.88,
+    "type": "trash"
+  },
+  {
+    "lat": 20.328472,
+    "lng": 85.840871,
+    "intensity": 0.73,
+    "type": "trash"
+  },
+  {
+    "lat": 20.359362,
+    "lng": 85.820507,
+    "intensity": 0.75,
+    "type": "trash"
+  },
+  {
+    "lat": 20.278864,
+    "lng": 85.760227,
+    "intensity": 0.85,
+    "type": "trash"
+  },
+  {
+    "lat": 20.336283,
+    "lng": 85.787541,
+    "intensity": 0.8,
+    "type": "trash"
+  },
+  {
+    "lat": 20.281474,
+    "lng": 85.878836,
+    "intensity": 0.68,
+    "type": "trash"
+  },
+  {
+    "lat": 20.316852,
+    "lng": 85.86271,
+    "intensity": 0.93,
+    "type": "trash"
+  },
+  {
+    "lat": 20.326856,
+    "lng": 85.875554,
+    "intensity": 0.79,
+    "type": "trash"
+  },
+  {
+    "lat": 20.312776,
+    "lng": 85.763389,
+    "intensity": 0.79,
+    "type": "trash"
+  },
+  {
+    "lat": 20.332089,
+    "lng": 85.800174,
+    "intensity": 0.85,
+    "type": "trash"
+  },
+  {
+    "lat": 20.337054,
+    "lng": 85.852692,
+    "intensity": 0.86,
+    "type": "trash"
+  },
+  {
+    "lat": 20.35193,
+    "lng": 85.879649,
+    "intensity": 0.62,
+    "type": "trash"
+  },
+  {
+    "lat": 20.33422,
+    "lng": 85.823474,
+    "intensity": 0.72,
+    "type": "trash"
+  },
+  {
+    "lat": 20.346185,
+    "lng": 85.800082,
+    "intensity": 0.88,
+    "type": "trash"
+  },
+  {
+    "lat": 20.354356,
+    "lng": 85.761347,
+    "intensity": 0.69,
+    "type": "trash"
+  },
+  {
+    "lat": 20.34423,
+    "lng": 85.852484,
+    "intensity": 0.83,
+    "type": "trash"
+  },
+  {
+    "lat": 20.301448,
+    "lng": 85.856654,
+    "intensity": 0.75,
+    "type": "trash"
+  },
+  {
+    "lat": 20.260509,
+    "lng": 85.832153,
+    "intensity": 0.68,
+    "type": "trash"
+  },
+  {
+    "lat": 20.357138,
+    "lng": 85.77169,
+    "intensity": 0.66,
+    "type": "trash"
+  },
+  {
+    "lat": 20.271466,
+    "lng": 85.815286,
+    "intensity": 0.63,
+    "type": "trash"
+  },
+  {
+    "lat": 20.335756,
+    "lng": 85.853948,
+    "intensity": 0.69,
+    "type": "trash"
+  },
+  {
+    "lat": 20.295888,
+    "lng": 85.863366,
+    "intensity": 0.83,
+    "type": "trash"
+  },
+  {
+    "lat": 20.326095,
+    "lng": 85.850074,
+    "intensity": 0.73,
+    "type": "trash"
+  },
+  {
+    "lat": 20.279782,
+    "lng": 85.78803,
+    "intensity": 0.83,
+    "type": "trash"
+  },
+  {
+    "lat": 20.311457,
+    "lng": 85.867676,
+    "intensity": 0.95,
+    "type": "trash"
+  },
+  {
+    "lat": 20.314432,
+    "lng": 85.807465,
+    "intensity": 0.69,
+    "type": "trash"
+  },
+  {
+    "lat": 20.318223,
+    "lng": 85.813208,
+    "intensity": 0.95,
+    "type": "trash"
+  },
+  {
+    "lat": 20.314386,
+    "lng": 85.812913,
+    "intensity": 0.62,
+    "type": "trash"
+  },
+  {
+    "lat": 20.270153,
+    "lng": 85.85813,
+    "intensity": 0.7,
+    "type": "trash"
+  },
+  {
+    "lat": 20.33797,
+    "lng": 85.774969,
+    "intensity": 0.89,
+    "type": "trash"
+  },
+  {
+    "lat": 20.306182,
+    "lng": 85.769568,
+    "intensity": 0.78,
+    "type": "trash"
+  },
+  {
+    "lat": 20.291184,
+    "lng": 85.854799,
+    "intensity": 0.78,
+    "type": "trash"
+  },
+  {
+    "lat": 20.349299,
+    "lng": 85.788092,
+    "intensity": 0.92,
+    "type": "trash"
+  },
+  {
+    "lat": 20.269695,
+    "lng": 85.868384,
+    "intensity": 0.66,
+    "type": "trash"
+  },
+  {
+    "lat": 20.359282,
+    "lng": 85.815699,
+    "intensity": 0.72,
+    "type": "trash"
+  },
+  {
+    "lat": 20.241823,
+    "lng": 85.77222,
+    "intensity": 0.6,
+    "type": "trash"
+  },
+  {
+    "lat": 20.348854,
+    "lng": 85.818164,
+    "intensity": 0.93,
+    "type": "trash"
+  },
+  {
+    "lat": 20.257313,
+    "lng": 85.861954,
+    "intensity": 0.93,
+    "type": "trash"
+  },
+  {
+    "lat": 20.241858,
+    "lng": 85.77511,
+    "intensity": 0.67,
+    "type": "trash"
+  },
+  {
+    "lat": 20.340343,
+    "lng": 85.774291,
+    "intensity": 0.78,
+    "type": "trash"
+  },
+  {
+    "lat": 20.246019,
+    "lng": 85.791596,
+    "intensity": 0.85,
+    "type": "trash"
+  },
+  {
+    "lat": 20.300244,
+    "lng": 85.852728,
+    "intensity": 0.96,
+    "type": "trash"
+  },
+  {
+    "lat": 20.312223,
+    "lng": 85.863853,
+    "intensity": 0.89,
+    "type": "trash"
+  },
+  {
+    "lat": 20.276415,
+    "lng": 85.791491,
+    "intensity": 0.66,
+    "type": "trash"
+  },
+  {
+    "lat": 20.28621,
+    "lng": 85.763617,
+    "intensity": 0.94,
+    "type": "trash"
+  },
+  {
+    "lat": 20.358519,
+    "lng": 85.854223,
+    "intensity": 0.76,
+    "type": "trash"
+  },
+  {
+    "lat": 20.249528,
+    "lng": 85.807574,
+    "intensity": 0.96,
+    "type": "trash"
+  },
+  {
+    "lat": 20.296324,
+    "lng": 85.820062,
+    "intensity": 0.77,
+    "type": "trash"
+  },
+  {
+    "lat": 20.279171,
+    "lng": 85.834518,
+    "intensity": 0.8,
+    "type": "trash"
+  },
+  {
+    "lat": 20.31685,
+    "lng": 85.840866,
+    "intensity": 0.88,
+    "type": "trash"
+  },
+  {
+    "lat": 20.319008,
+    "lng": 85.847933,
+    "intensity": 0.8,
+    "type": "trash"
+  },
+  {
+    "lat": 20.27452,
+    "lng": 85.774078,
+    "intensity": 0.7,
+    "type": "trash"
+  },
+  {
+    "lat": 20.27328,
+    "lng": 85.791193,
+    "intensity": 0.62,
+    "type": "trash"
+  },
+  {
+    "lat": 20.328944,
+    "lng": 85.804179,
+    "intensity": 0.9,
+    "type": "trash"
+  },
+  {
+    "lat": 20.273058,
+    "lng": 85.832281,
+    "intensity": 0.76,
+    "type": "trash"
+  },
+  {
+    "lat": 20.309422,
+    "lng": 85.842549,
+    "intensity": 0.76,
+    "type": "trash"
+  },
+  {
+    "lat": 20.323501,
+    "lng": 85.87953,
+    "intensity": 0.98,
+    "type": "trash"
+  },
+  {
+    "lat": 20.312528,
+    "lng": 85.866464,
+    "intensity": 0.79,
+    "type": "trash"
+  },
+  {
+    "lat": 20.316956,
+    "lng": 85.846121,
+    "intensity": 0.83,
+    "type": "trash"
+  },
+  {
+    "lat": 20.279359,
+    "lng": 85.824653,
+    "intensity": 0.82,
+    "type": "trash"
+  },
+  {
+    "lat": 20.326764,
+    "lng": 85.851293,
+    "intensity": 0.68,
+    "type": "trash"
+  },
+  {
+    "lat": 20.260836,
+    "lng": 85.847313,
+    "intensity": 0.76,
+    "type": "trash"
+  },
+  {
+    "lat": 20.269278,
+    "lng": 85.791097,
+    "intensity": 0.82,
+    "type": "trash"
+  },
+  {
+    "lat": 20.309123,
+    "lng": 85.853287,
+    "intensity": 0.9,
+    "type": "trash"
+  },
+  {
+    "lat": 20.298683,
+    "lng": 85.797279,
+    "intensity": 0.95,
+    "type": "trash"
+  },
+  {
+    "lat": 20.261987,
+    "lng": 85.843491,
+    "intensity": 0.79,
+    "type": "trash"
+  },
+  {
+    "lat": 20.270522,
+    "lng": 85.767436,
+    "intensity": 0.68,
+    "type": "trash"
+  },
+  {
+    "lat": 20.337295,
+    "lng": 85.86035,
+    "intensity": 0.83,
+    "type": "trash"
+  },
+  {
+    "lat": 20.330959,
+    "lng": 85.835952,
+    "intensity": 0.76,
+    "type": "trash"
+  },
+  {
+    "lat": 20.250209,
+    "lng": 85.778455,
+    "intensity": 0.7,
+    "type": "trash"
+  },
+  {
+    "lat": 20.324531,
+    "lng": 85.829466,
+    "intensity": 0.82,
+    "type": "trash"
+  },
+  {
+    "lat": 20.309924,
+    "lng": 85.801045,
+    "intensity": 0.64,
+    "type": "trash"
+  },
+  {
+    "lat": 20.276302,
+    "lng": 85.823445,
+    "intensity": 0.9,
+    "type": "trash"
+  },
+  {
+    "lat": 20.303205,
+    "lng": 85.781168,
+    "intensity": 0.79,
+    "type": "trash"
+  },
+  {
+    "lat": 20.275881,
+    "lng": 85.762078,
+    "intensity": 0.91,
+    "type": "trash"
+  },
+  {
+    "lat": 20.339635,
+    "lng": 85.773742,
+    "intensity": 0.95,
+    "type": "trash"
+  },
+  {
+    "lat": 20.242711,
+    "lng": 85.85296,
+    "intensity": 0.73,
+    "type": "trash"
+  },
+  {
+    "lat": 20.358184,
+    "lng": 85.857161,
+    "intensity": 0.8,
+    "type": "trash"
+  },
+  {
+    "lat": 20.306435,
+    "lng": 85.781412,
+    "intensity": 0.93,
+    "type": "trash"
+  },
+  {
+    "lat": 20.25384,
+    "lng": 85.817322,
+    "intensity": 0.95,
+    "type": "trash"
+  },
+  {
+    "lat": 20.316698,
+    "lng": 85.868349,
+    "intensity": 0.93,
+    "type": "trash"
+  },
+  {
+    "lat": 20.338176,
+    "lng": 85.76696,
+    "intensity": 0.86,
+    "type": "trash"
+  },
+  {
+    "lat": 20.341588,
+    "lng": 85.80994,
+    "intensity": 0.93,
+    "type": "trash"
+  },
+  {
+    "lat": 20.264023,
+    "lng": 85.787129,
+    "intensity": 0.78,
+    "type": "trash"
+  },
+  {
+    "lat": 20.306185,
+    "lng": 85.769202,
+    "intensity": 0.65,
+    "type": "trash"
+  },
+  {
+    "lat": 20.254347,
+    "lng": 85.76975,
+    "intensity": 0.72,
+    "type": "trash"
+  },
+  {
+    "lat": 20.273208,
+    "lng": 85.806773,
+    "intensity": 0.77,
+    "type": "trash"
+  },
+  {
+    "lat": 20.269724,
+    "lng": 85.790901,
+    "intensity": 0.96,
+    "type": "trash"
+  },
+  {
+    "lat": 20.255342,
+    "lng": 85.83608,
+    "intensity": 0.66,
+    "type": "trash"
+  },
+  {
+    "lat": 20.346597,
+    "lng": 85.83491,
+    "intensity": 0.67,
+    "type": "trash"
+  },
+  {
+    "lat": 20.34908,
+    "lng": 85.85874,
+    "intensity": 0.73,
+    "type": "trash"
+  },
+  {
+    "lat": 20.353232,
+    "lng": 85.768989,
+    "intensity": 0.91,
+    "type": "trash"
+  },
+  {
+    "lat": 20.251717,
+    "lng": 85.85691,
+    "intensity": 0.62,
+    "type": "trash"
+  },
+  {
+    "lat": 20.275689,
+    "lng": 85.762657,
+    "intensity": 0.94,
+    "type": "trash"
+  },
+  {
+    "lat": 20.255388,
+    "lng": 85.815157,
+    "intensity": 0.77,
+    "type": "trash"
+  },
+  {
+    "lat": 20.241309,
+    "lng": 85.823922,
+    "intensity": 0.75,
+    "type": "trash"
+  },
+  {
+    "lat": 20.359703,
+    "lng": 85.849967,
+    "intensity": 0.81,
+    "type": "trash"
+  },
+  {
+    "lat": 20.276583,
+    "lng": 85.786736,
+    "intensity": 0.74,
+    "type": "trash"
+  },
+  {
+    "lat": 20.313296,
+    "lng": 85.823057,
+    "intensity": 0.65,
+    "type": "trash"
+  },
+  {
+    "lat": 20.250397,
+    "lng": 85.840872,
+    "intensity": 0.81,
+    "type": "trash"
+  },
+  {
+    "lat": 20.250224,
+    "lng": 85.769382,
+    "intensity": 0.75,
+    "type": "trash"
+  },
+  {
+    "lat": 20.315801,
+    "lng": 85.821098,
+    "intensity": 0.63,
+    "type": "trash"
+  },
+  {
+    "lat": 20.349247,
+    "lng": 85.830368,
+    "intensity": 0.67,
+    "type": "trash"
+  },
+  {
+    "lat": 20.30274,
+    "lng": 85.824029,
+    "intensity": 0.86,
+    "type": "trash"
+  },
+  {
+    "lat": 20.321194,
+    "lng": 85.771889,
+    "intensity": 0.76,
+    "type": "trash"
+  },
+  {
+    "lat": 20.258646,
+    "lng": 85.838942,
+    "intensity": 0.79,
+    "type": "trash"
+  },
+  {
+    "lat": 20.270853,
+    "lng": 85.869235,
+    "intensity": 0.66,
+    "type": "trash"
+  },
+  {
+    "lat": 20.294737,
+    "lng": 85.761759,
+    "intensity": 0.7,
+    "type": "trash"
+  },
+  {
+    "lat": 20.289017,
+    "lng": 85.771056,
+    "intensity": 0.74,
+    "type": "trash"
+  },
+  {
+    "lat": 20.251554,
+    "lng": 85.866405,
+    "intensity": 0.87,
+    "type": "trash"
+  },
+  {
+    "lat": 20.269344,
+    "lng": 85.817395,
+    "intensity": 0.81,
+    "type": "trash"
+  }
+]

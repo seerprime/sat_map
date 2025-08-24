@@ -1,0 +1,1202 @@
+[
+  {
+    "lat": 20.254477,
+    "lng": 85.780739,
+    "quality": "moderate",
+    "contamination": 0.77
+  },
+  {
+    "lat": 20.255302,
+    "lng": 85.784672,
+    "quality": "critical",
+    "contamination": 0.94
+  },
+  {
+    "lat": 20.305684,
+    "lng": 85.803439,
+    "quality": "good",
+    "contamination": 0.65
+  },
+  {
+    "lat": 20.345436,
+    "lng": 85.762691,
+    "quality": "poor",
+    "contamination": 0.51
+  },
+  {
+    "lat": 20.267557,
+    "lng": 85.879975,
+    "quality": "critical",
+    "contamination": 0.58
+  },
+  {
+    "lat": 20.349024,
+    "lng": 85.774395,
+    "quality": "good",
+    "contamination": 0.3
+  },
+  {
+    "lat": 20.331722,
+    "lng": 85.782794,
+    "quality": "moderate",
+    "contamination": 0.78
+  },
+  {
+    "lat": 20.259169,
+    "lng": 85.871362,
+    "quality": "moderate",
+    "contamination": 0.35
+  },
+  {
+    "lat": 20.291837,
+    "lng": 85.85322,
+    "quality": "good",
+    "contamination": 0.66
+  },
+  {
+    "lat": 20.339955,
+    "lng": 85.855942,
+    "quality": "critical",
+    "contamination": 0.52
+  },
+  {
+    "lat": 20.274965,
+    "lng": 85.874946,
+    "quality": "good",
+    "contamination": 0.39
+  },
+  {
+    "lat": 20.340834,
+    "lng": 85.820883,
+    "quality": "moderate",
+    "contamination": 0.7
+  },
+  {
+    "lat": 20.247897,
+    "lng": 85.805428,
+    "quality": "poor",
+    "contamination": 0.59
+  },
+  {
+    "lat": 20.264062,
+    "lng": 85.821224,
+    "quality": "moderate",
+    "contamination": 0.94
+  },
+  {
+    "lat": 20.316735,
+    "lng": 85.865898,
+    "quality": "critical",
+    "contamination": 0.34
+  },
+  {
+    "lat": 20.339223,
+    "lng": 85.81012,
+    "quality": "moderate",
+    "contamination": 0.46
+  },
+  {
+    "lat": 20.336596,
+    "lng": 85.875706,
+    "quality": "poor",
+    "contamination": 0.58
+  },
+  {
+    "lat": 20.358389,
+    "lng": 85.782459,
+    "quality": "good",
+    "contamination": 0.56
+  },
+  {
+    "lat": 20.301054,
+    "lng": 85.820203,
+    "quality": "poor",
+    "contamination": 0.46
+  },
+  {
+    "lat": 20.260944,
+    "lng": 85.763325,
+    "quality": "good",
+    "contamination": 0.7
+  },
+  {
+    "lat": 20.283885,
+    "lng": 85.864848,
+    "quality": "poor",
+    "contamination": 0.44
+  },
+  {
+    "lat": 20.297547,
+    "lng": 85.872445,
+    "quality": "moderate",
+    "contamination": 0.48
+  },
+  {
+    "lat": 20.316643,
+    "lng": 85.762455,
+    "quality": "poor",
+    "contamination": 0.71
+  },
+  {
+    "lat": 20.264031,
+    "lng": 85.876719,
+    "quality": "critical",
+    "contamination": 0.85
+  },
+  {
+    "lat": 20.276434,
+    "lng": 85.80656,
+    "quality": "poor",
+    "contamination": 0.83
+  },
+  {
+    "lat": 20.310929,
+    "lng": 85.879182,
+    "quality": "moderate",
+    "contamination": 0.37
+  },
+  {
+    "lat": 20.335949,
+    "lng": 85.797813,
+    "quality": "good",
+    "contamination": 0.5
+  },
+  {
+    "lat": 20.270212,
+    "lng": 85.794298,
+    "quality": "moderate",
+    "contamination": 0.75
+  },
+  {
+    "lat": 20.35207,
+    "lng": 85.817941,
+    "quality": "moderate",
+    "contamination": 0.33
+  },
+  {
+    "lat": 20.283506,
+    "lng": 85.878459,
+    "quality": "poor",
+    "contamination": 0.32
+  },
+  {
+    "lat": 20.293468,
+    "lng": 85.858785,
+    "quality": "poor",
+    "contamination": 0.73
+  },
+  {
+    "lat": 20.349374,
+    "lng": 85.82663,
+    "quality": "poor",
+    "contamination": 0.42
+  },
+  {
+    "lat": 20.341333,
+    "lng": 85.865596,
+    "quality": "critical",
+    "contamination": 0.55
+  },
+  {
+    "lat": 20.353094,
+    "lng": 85.857001,
+    "quality": "moderate",
+    "contamination": 0.88
+  },
+  {
+    "lat": 20.329498,
+    "lng": 85.846202,
+    "quality": "critical",
+    "contamination": 0.63
+  },
+  {
+    "lat": 20.311707,
+    "lng": 85.873543,
+    "quality": "moderate",
+    "contamination": 0.53
+  },
+  {
+    "lat": 20.254072,
+    "lng": 85.840283,
+    "quality": "good",
+    "contamination": 0.61
+  },
+  {
+    "lat": 20.350308,
+    "lng": 85.86518,
+    "quality": "good",
+    "contamination": 0.52
+  },
+  {
+    "lat": 20.331583,
+    "lng": 85.823412,
+    "quality": "poor",
+    "contamination": 0.39
+  },
+  {
+    "lat": 20.345583,
+    "lng": 85.805032,
+    "quality": "critical",
+    "contamination": 0.4
+  },
+  {
+    "lat": 20.343215,
+    "lng": 85.801707,
+    "quality": "good",
+    "contamination": 0.56
+  },
+  {
+    "lat": 20.259538,
+    "lng": 85.872225,
+    "quality": "poor",
+    "contamination": 0.53
+  },
+  {
+    "lat": 20.339594,
+    "lng": 85.877591,
+    "quality": "critical",
+    "contamination": 0.57
+  },
+  {
+    "lat": 20.315766,
+    "lng": 85.825665,
+    "quality": "good",
+    "contamination": 0.38
+  },
+  {
+    "lat": 20.258973,
+    "lng": 85.812355,
+    "quality": "poor",
+    "contamination": 0.5
+  },
+  {
+    "lat": 20.304814,
+    "lng": 85.833985,
+    "quality": "poor",
+    "contamination": 0.93
+  },
+  {
+    "lat": 20.294796,
+    "lng": 85.776381,
+    "quality": "poor",
+    "contamination": 0.95
+  },
+  {
+    "lat": 20.334529,
+    "lng": 85.812139,
+    "quality": "good",
+    "contamination": 0.36
+  },
+  {
+    "lat": 20.350341,
+    "lng": 85.843514,
+    "quality": "critical",
+    "contamination": 0.63
+  },
+  {
+    "lat": 20.309619,
+    "lng": 85.870471,
+    "quality": "moderate",
+    "contamination": 0.64
+  },
+  {
+    "lat": 20.262989,
+    "lng": 85.786512,
+    "quality": "poor",
+    "contamination": 0.89
+  },
+  {
+    "lat": 20.312277,
+    "lng": 85.793776,
+    "quality": "moderate",
+    "contamination": 0.85
+  },
+  {
+    "lat": 20.305209,
+    "lng": 85.840691,
+    "quality": "critical",
+    "contamination": 0.43
+  },
+  {
+    "lat": 20.293829,
+    "lng": 85.867011,
+    "quality": "good",
+    "contamination": 0.32
+  },
+  {
+    "lat": 20.308191,
+    "lng": 85.842298,
+    "quality": "moderate",
+    "contamination": 0.5
+  },
+  {
+    "lat": 20.282767,
+    "lng": 85.760479,
+    "quality": "good",
+    "contamination": 0.45
+  },
+  {
+    "lat": 20.320953,
+    "lng": 85.818844,
+    "quality": "poor",
+    "contamination": 0.77
+  },
+  {
+    "lat": 20.347419,
+    "lng": 85.870832,
+    "quality": "critical",
+    "contamination": 0.54
+  },
+  {
+    "lat": 20.328343,
+    "lng": 85.768548,
+    "quality": "moderate",
+    "contamination": 0.48
+  },
+  {
+    "lat": 20.335212,
+    "lng": 85.825116,
+    "quality": "good",
+    "contamination": 0.76
+  },
+  {
+    "lat": 20.24509,
+    "lng": 85.797692,
+    "quality": "good",
+    "contamination": 0.5
+  },
+  {
+    "lat": 20.355969,
+    "lng": 85.791057,
+    "quality": "moderate",
+    "contamination": 0.55
+  },
+  {
+    "lat": 20.325542,
+    "lng": 85.851549,
+    "quality": "good",
+    "contamination": 0.66
+  },
+  {
+    "lat": 20.241632,
+    "lng": 85.76855,
+    "quality": "moderate",
+    "contamination": 0.33
+  },
+  {
+    "lat": 20.291388,
+    "lng": 85.78773,
+    "quality": "moderate",
+    "contamination": 0.6
+  },
+  {
+    "lat": 20.305249,
+    "lng": 85.816681,
+    "quality": "poor",
+    "contamination": 0.68
+  },
+  {
+    "lat": 20.27388,
+    "lng": 85.788217,
+    "quality": "moderate",
+    "contamination": 0.48
+  },
+  {
+    "lat": 20.357821,
+    "lng": 85.777177,
+    "quality": "poor",
+    "contamination": 0.72
+  },
+  {
+    "lat": 20.319141,
+    "lng": 85.807885,
+    "quality": "poor",
+    "contamination": 0.65
+  },
+  {
+    "lat": 20.243753,
+    "lng": 85.810875,
+    "quality": "poor",
+    "contamination": 0.8
+  },
+  {
+    "lat": 20.272151,
+    "lng": 85.834958,
+    "quality": "good",
+    "contamination": 0.49
+  },
+  {
+    "lat": 20.358568,
+    "lng": 85.878323,
+    "quality": "poor",
+    "contamination": 0.71
+  },
+  {
+    "lat": 20.33156,
+    "lng": 85.808313,
+    "quality": "good",
+    "contamination": 0.44
+  },
+  {
+    "lat": 20.354619,
+    "lng": 85.807116,
+    "quality": "moderate",
+    "contamination": 0.5
+  },
+  {
+    "lat": 20.274082,
+    "lng": 85.859992,
+    "quality": "critical",
+    "contamination": 0.81
+  },
+  {
+    "lat": 20.306954,
+    "lng": 85.816221,
+    "quality": "critical",
+    "contamination": 0.54
+  },
+  {
+    "lat": 20.333671,
+    "lng": 85.820551,
+    "quality": "good",
+    "contamination": 0.58
+  },
+  {
+    "lat": 20.272239,
+    "lng": 85.799754,
+    "quality": "moderate",
+    "contamination": 0.68
+  },
+  {
+    "lat": 20.339846,
+    "lng": 85.835432,
+    "quality": "moderate",
+    "contamination": 0.37
+  },
+  {
+    "lat": 20.30014,
+    "lng": 85.788868,
+    "quality": "good",
+    "contamination": 0.85
+  },
+  {
+    "lat": 20.270399,
+    "lng": 85.869961,
+    "quality": "poor",
+    "contamination": 0.88
+  },
+  {
+    "lat": 20.272779,
+    "lng": 85.871888,
+    "quality": "moderate",
+    "contamination": 0.42
+  },
+  {
+    "lat": 20.303894,
+    "lng": 85.772034,
+    "quality": "poor",
+    "contamination": 0.44
+  },
+  {
+    "lat": 20.316987,
+    "lng": 85.789802,
+    "quality": "poor",
+    "contamination": 0.91
+  },
+  {
+    "lat": 20.321172,
+    "lng": 85.766152,
+    "quality": "good",
+    "contamination": 0.47
+  },
+  {
+    "lat": 20.26737,
+    "lng": 85.860227,
+    "quality": "good",
+    "contamination": 0.52
+  },
+  {
+    "lat": 20.276271,
+    "lng": 85.783379,
+    "quality": "good",
+    "contamination": 0.62
+  },
+  {
+    "lat": 20.332604,
+    "lng": 85.764481,
+    "quality": "poor",
+    "contamination": 0.77
+  },
+  {
+    "lat": 20.2438,
+    "lng": 85.793178,
+    "quality": "good",
+    "contamination": 0.52
+  },
+  {
+    "lat": 20.300335,
+    "lng": 85.875398,
+    "quality": "moderate",
+    "contamination": 0.71
+  },
+  {
+    "lat": 20.337912,
+    "lng": 85.772084,
+    "quality": "moderate",
+    "contamination": 0.61
+  },
+  {
+    "lat": 20.345167,
+    "lng": 85.794581,
+    "quality": "poor",
+    "contamination": 0.72
+  },
+  {
+    "lat": 20.303173,
+    "lng": 85.857338,
+    "quality": "poor",
+    "contamination": 0.87
+  },
+  {
+    "lat": 20.356894,
+    "lng": 85.843775,
+    "quality": "moderate",
+    "contamination": 0.42
+  },
+  {
+    "lat": 20.324463,
+    "lng": 85.846571,
+    "quality": "moderate",
+    "contamination": 0.57
+  },
+  {
+    "lat": 20.307123,
+    "lng": 85.80734,
+    "quality": "critical",
+    "contamination": 0.36
+  },
+  {
+    "lat": 20.309829,
+    "lng": 85.78302,
+    "quality": "critical",
+    "contamination": 0.67
+  },
+  {
+    "lat": 20.293987,
+    "lng": 85.844605,
+    "quality": "moderate",
+    "contamination": 0.89
+  },
+  {
+    "lat": 20.325024,
+    "lng": 85.827941,
+    "quality": "poor",
+    "contamination": 0.54
+  },
+  {
+    "lat": 20.241488,
+    "lng": 85.78424,
+    "quality": "poor",
+    "contamination": 0.52
+  },
+  {
+    "lat": 20.24457,
+    "lng": 85.803759,
+    "quality": "good",
+    "contamination": 0.66
+  },
+  {
+    "lat": 20.343038,
+    "lng": 85.79677,
+    "quality": "moderate",
+    "contamination": 0.58
+  },
+  {
+    "lat": 20.335083,
+    "lng": 85.810581,
+    "quality": "moderate",
+    "contamination": 0.62
+  },
+  {
+    "lat": 20.317936,
+    "lng": 85.801112,
+    "quality": "poor",
+    "contamination": 0.67
+  },
+  {
+    "lat": 20.321547,
+    "lng": 85.826267,
+    "quality": "critical",
+    "contamination": 0.82
+  },
+  {
+    "lat": 20.251587,
+    "lng": 85.832993,
+    "quality": "moderate",
+    "contamination": 0.38
+  },
+  {
+    "lat": 20.275958,
+    "lng": 85.792128,
+    "quality": "poor",
+    "contamination": 0.69
+  },
+  {
+    "lat": 20.286447,
+    "lng": 85.821565,
+    "quality": "moderate",
+    "contamination": 0.5
+  },
+  {
+    "lat": 20.246632,
+    "lng": 85.848479,
+    "quality": "poor",
+    "contamination": 0.39
+  },
+  {
+    "lat": 20.354193,
+    "lng": 85.855996,
+    "quality": "moderate",
+    "contamination": 0.55
+  },
+  {
+    "lat": 20.273037,
+    "lng": 85.860725,
+    "quality": "moderate",
+    "contamination": 0.85
+  },
+  {
+    "lat": 20.266993,
+    "lng": 85.811252,
+    "quality": "poor",
+    "contamination": 0.89
+  },
+  {
+    "lat": 20.339748,
+    "lng": 85.855656,
+    "quality": "good",
+    "contamination": 0.38
+  },
+  {
+    "lat": 20.271113,
+    "lng": 85.875037,
+    "quality": "critical",
+    "contamination": 0.73
+  },
+  {
+    "lat": 20.307235,
+    "lng": 85.796939,
+    "quality": "critical",
+    "contamination": 0.94
+  },
+  {
+    "lat": 20.253862,
+    "lng": 85.87358,
+    "quality": "good",
+    "contamination": 0.88
+  },
+  {
+    "lat": 20.290254,
+    "lng": 85.825448,
+    "quality": "poor",
+    "contamination": 0.35
+  },
+  {
+    "lat": 20.333714,
+    "lng": 85.815914,
+    "quality": "poor",
+    "contamination": 0.61
+  },
+  {
+    "lat": 20.330791,
+    "lng": 85.825329,
+    "quality": "critical",
+    "contamination": 0.37
+  },
+  {
+    "lat": 20.273198,
+    "lng": 85.839486,
+    "quality": "poor",
+    "contamination": 0.78
+  },
+  {
+    "lat": 20.281723,
+    "lng": 85.7792,
+    "quality": "poor",
+    "contamination": 0.54
+  },
+  {
+    "lat": 20.273235,
+    "lng": 85.815424,
+    "quality": "critical",
+    "contamination": 0.52
+  },
+  {
+    "lat": 20.254066,
+    "lng": 85.774596,
+    "quality": "poor",
+    "contamination": 0.58
+  },
+  {
+    "lat": 20.320486,
+    "lng": 85.790064,
+    "quality": "poor",
+    "contamination": 0.89
+  },
+  {
+    "lat": 20.25366,
+    "lng": 85.786723,
+    "quality": "good",
+    "contamination": 0.74
+  },
+  {
+    "lat": 20.277828,
+    "lng": 85.814234,
+    "quality": "critical",
+    "contamination": 0.79
+  },
+  {
+    "lat": 20.319056,
+    "lng": 85.849671,
+    "quality": "poor",
+    "contamination": 0.58
+  },
+  {
+    "lat": 20.354896,
+    "lng": 85.807444,
+    "quality": "good",
+    "contamination": 0.34
+  },
+  {
+    "lat": 20.301325,
+    "lng": 85.83493,
+    "quality": "moderate",
+    "contamination": 0.5
+  },
+  {
+    "lat": 20.258085,
+    "lng": 85.785063,
+    "quality": "moderate",
+    "contamination": 0.77
+  },
+  {
+    "lat": 20.291913,
+    "lng": 85.86099,
+    "quality": "critical",
+    "contamination": 0.48
+  },
+  {
+    "lat": 20.258488,
+    "lng": 85.828581,
+    "quality": "poor",
+    "contamination": 0.32
+  },
+  {
+    "lat": 20.326951,
+    "lng": 85.768124,
+    "quality": "moderate",
+    "contamination": 0.81
+  },
+  {
+    "lat": 20.254413,
+    "lng": 85.794691,
+    "quality": "poor",
+    "contamination": 0.36
+  },
+  {
+    "lat": 20.335971,
+    "lng": 85.797004,
+    "quality": "moderate",
+    "contamination": 0.8
+  },
+  {
+    "lat": 20.278951,
+    "lng": 85.771248,
+    "quality": "good",
+    "contamination": 0.67
+  },
+  {
+    "lat": 20.293371,
+    "lng": 85.796925,
+    "quality": "moderate",
+    "contamination": 0.47
+  },
+  {
+    "lat": 20.249788,
+    "lng": 85.802249,
+    "quality": "poor",
+    "contamination": 0.73
+  },
+  {
+    "lat": 20.286133,
+    "lng": 85.777845,
+    "quality": "moderate",
+    "contamination": 0.55
+  },
+  {
+    "lat": 20.264684,
+    "lng": 85.772475,
+    "quality": "poor",
+    "contamination": 0.83
+  },
+  {
+    "lat": 20.285446,
+    "lng": 85.877944,
+    "quality": "good",
+    "contamination": 0.5
+  },
+  {
+    "lat": 20.289452,
+    "lng": 85.876672,
+    "quality": "critical",
+    "contamination": 0.77
+  },
+  {
+    "lat": 20.256502,
+    "lng": 85.867358,
+    "quality": "good",
+    "contamination": 0.36
+  },
+  {
+    "lat": 20.337555,
+    "lng": 85.816094,
+    "quality": "moderate",
+    "contamination": 0.71
+  },
+  {
+    "lat": 20.353957,
+    "lng": 85.764458,
+    "quality": "poor",
+    "contamination": 0.8
+  },
+  {
+    "lat": 20.270415,
+    "lng": 85.790891,
+    "quality": "good",
+    "contamination": 0.75
+  },
+  {
+    "lat": 20.328885,
+    "lng": 85.867261,
+    "quality": "critical",
+    "contamination": 0.89
+  },
+  {
+    "lat": 20.336796,
+    "lng": 85.8471,
+    "quality": "good",
+    "contamination": 0.76
+  },
+  {
+    "lat": 20.324903,
+    "lng": 85.825609,
+    "quality": "moderate",
+    "contamination": 0.65
+  },
+  {
+    "lat": 20.307974,
+    "lng": 85.806546,
+    "quality": "poor",
+    "contamination": 0.53
+  },
+  {
+    "lat": 20.302104,
+    "lng": 85.868377,
+    "quality": "critical",
+    "contamination": 0.32
+  },
+  {
+    "lat": 20.295028,
+    "lng": 85.830464,
+    "quality": "moderate",
+    "contamination": 0.46
+  },
+  {
+    "lat": 20.243211,
+    "lng": 85.85807,
+    "quality": "poor",
+    "contamination": 0.36
+  },
+  {
+    "lat": 20.306582,
+    "lng": 85.808946,
+    "quality": "moderate",
+    "contamination": 0.49
+  },
+  {
+    "lat": 20.274502,
+    "lng": 85.781601,
+    "quality": "poor",
+    "contamination": 0.36
+  },
+  {
+    "lat": 20.29635,
+    "lng": 85.786197,
+    "quality": "critical",
+    "contamination": 0.49
+  },
+  {
+    "lat": 20.313693,
+    "lng": 85.831493,
+    "quality": "critical",
+    "contamination": 0.58
+  },
+  {
+    "lat": 20.293178,
+    "lng": 85.775557,
+    "quality": "moderate",
+    "contamination": 0.91
+  },
+  {
+    "lat": 20.304264,
+    "lng": 85.787572,
+    "quality": "moderate",
+    "contamination": 0.4
+  },
+  {
+    "lat": 20.282902,
+    "lng": 85.867983,
+    "quality": "moderate",
+    "contamination": 0.76
+  },
+  {
+    "lat": 20.33282,
+    "lng": 85.862676,
+    "quality": "critical",
+    "contamination": 0.42
+  },
+  {
+    "lat": 20.264565,
+    "lng": 85.789675,
+    "quality": "good",
+    "contamination": 0.7
+  },
+  {
+    "lat": 20.276991,
+    "lng": 85.799126,
+    "quality": "poor",
+    "contamination": 0.4
+  },
+  {
+    "lat": 20.258554,
+    "lng": 85.877771,
+    "quality": "poor",
+    "contamination": 0.92
+  },
+  {
+    "lat": 20.313094,
+    "lng": 85.765906,
+    "quality": "moderate",
+    "contamination": 0.47
+  },
+  {
+    "lat": 20.359718,
+    "lng": 85.818576,
+    "quality": "moderate",
+    "contamination": 0.53
+  },
+  {
+    "lat": 20.267242,
+    "lng": 85.849233,
+    "quality": "poor",
+    "contamination": 0.61
+  },
+  {
+    "lat": 20.309931,
+    "lng": 85.792947,
+    "quality": "critical",
+    "contamination": 0.58
+  },
+  {
+    "lat": 20.251058,
+    "lng": 85.830647,
+    "quality": "critical",
+    "contamination": 0.47
+  },
+  {
+    "lat": 20.259313,
+    "lng": 85.813415,
+    "quality": "poor",
+    "contamination": 0.55
+  },
+  {
+    "lat": 20.257461,
+    "lng": 85.826751,
+    "quality": "moderate",
+    "contamination": 0.77
+  },
+  {
+    "lat": 20.334917,
+    "lng": 85.797671,
+    "quality": "moderate",
+    "contamination": 0.44
+  },
+  {
+    "lat": 20.308308,
+    "lng": 85.858883,
+    "quality": "good",
+    "contamination": 0.62
+  },
+  {
+    "lat": 20.306115,
+    "lng": 85.843655,
+    "quality": "good",
+    "contamination": 0.95
+  },
+  {
+    "lat": 20.296715,
+    "lng": 85.843382,
+    "quality": "poor",
+    "contamination": 0.45
+  },
+  {
+    "lat": 20.2906,
+    "lng": 85.855726,
+    "quality": "poor",
+    "contamination": 0.7
+  },
+  {
+    "lat": 20.349392,
+    "lng": 85.875784,
+    "quality": "poor",
+    "contamination": 0.37
+  },
+  {
+    "lat": 20.27877,
+    "lng": 85.761237,
+    "quality": "poor",
+    "contamination": 0.65
+  },
+  {
+    "lat": 20.267843,
+    "lng": 85.822083,
+    "quality": "moderate",
+    "contamination": 0.71
+  },
+  {
+    "lat": 20.269865,
+    "lng": 85.846049,
+    "quality": "good",
+    "contamination": 0.31
+  },
+  {
+    "lat": 20.351639,
+    "lng": 85.878895,
+    "quality": "poor",
+    "contamination": 0.4
+  },
+  {
+    "lat": 20.275506,
+    "lng": 85.83829,
+    "quality": "poor",
+    "contamination": 0.68
+  },
+  {
+    "lat": 20.294299,
+    "lng": 85.838393,
+    "quality": "moderate",
+    "contamination": 0.7
+  },
+  {
+    "lat": 20.316516,
+    "lng": 85.878763,
+    "quality": "critical",
+    "contamination": 0.49
+  },
+  {
+    "lat": 20.283173,
+    "lng": 85.875397,
+    "quality": "poor",
+    "contamination": 0.47
+  },
+  {
+    "lat": 20.343912,
+    "lng": 85.811159,
+    "quality": "poor",
+    "contamination": 0.9
+  },
+  {
+    "lat": 20.352352,
+    "lng": 85.872866,
+    "quality": "good",
+    "contamination": 0.36
+  },
+  {
+    "lat": 20.274351,
+    "lng": 85.875786,
+    "quality": "moderate",
+    "contamination": 0.84
+  },
+  {
+    "lat": 20.335934,
+    "lng": 85.827179,
+    "quality": "good",
+    "contamination": 0.58
+  },
+  {
+    "lat": 20.278589,
+    "lng": 85.831602,
+    "quality": "moderate",
+    "contamination": 0.43
+  },
+  {
+    "lat": 20.250092,
+    "lng": 85.799868,
+    "quality": "poor",
+    "contamination": 0.89
+  },
+  {
+    "lat": 20.287922,
+    "lng": 85.812878,
+    "quality": "good",
+    "contamination": 0.48
+  },
+  {
+    "lat": 20.286724,
+    "lng": 85.778503,
+    "quality": "moderate",
+    "contamination": 0.47
+  },
+  {
+    "lat": 20.297163,
+    "lng": 85.862491,
+    "quality": "moderate",
+    "contamination": 0.67
+  },
+  {
+    "lat": 20.351974,
+    "lng": 85.840613,
+    "quality": "poor",
+    "contamination": 0.39
+  },
+  {
+    "lat": 20.346176,
+    "lng": 85.794995,
+    "quality": "good",
+    "contamination": 0.32
+  },
+  {
+    "lat": 20.349389,
+    "lng": 85.842229,
+    "quality": "moderate",
+    "contamination": 0.79
+  },
+  {
+    "lat": 20.255465,
+    "lng": 85.854889,
+    "quality": "poor",
+    "contamination": 0.81
+  },
+  {
+    "lat": 20.303297,
+    "lng": 85.788132,
+    "quality": "moderate",
+    "contamination": 0.54
+  },
+  {
+    "lat": 20.246605,
+    "lng": 85.787769,
+    "quality": "good",
+    "contamination": 0.94
+  }
+]

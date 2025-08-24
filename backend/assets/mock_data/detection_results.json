@@ -1,0 +1,10 @@
+{
+  "sample_trash.jpg": [
+    { "label": "plastic_bottle", "confidence": 0.91, "bbox": [120, 80, 200, 160] },
+    { "label": "can", "confidence": 0.85, "bbox": [300, 200, 360, 260] }
+  ],
+  "river_dump.jpg": [
+    { "label": "plastic_bag", "confidence": 0.94, "bbox": [50, 100, 150, 200] },
+    { "label": "styrofoam", "confidence": 0.88, "bbox": [220, 150, 280, 210] }
+  ]
+}

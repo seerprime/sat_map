@@ -1,0 +1,4 @@
+[
+  { "id": 1, "location": "20.2961,85.8245", "status": "verified", "timestamp": "2025-08-24T10:15:00Z" },
+  { "id": 2, "location": "20.3082,85.8181", "status": "in-progress", "timestamp": "2025-08-24T10:20:00Z" }
+]
