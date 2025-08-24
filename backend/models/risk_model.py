@@ -47,24 +47,15 @@ class EnvironmentalRiskModel:
         Assess disease risk based on environmental contamination
         """
         try:
-            # Calculate base risk from trash contamination
             trash_risk = self._calculate_trash_risk(trash_data)
-            
-            # Calculate water contamination risk
             water_risk = self._calculate_water_risk(water_data) if water_data else 0
-            
-            # Assess proximity to sensitive locations
             proximity_risk = self._assess_proximity_risk(location)
-            
-            # Factor in environmental conditions
             environmental_risk = self._assess_environmental_factors(location)
             
-            # Calculate combined risk score
             combined_risk = self._calculate_combined_risk(
                 trash_risk, water_risk, proximity_risk, environmental_risk
             )
             
-            # Generate disease predictions
             disease_predictions = self._predict_disease_risks(
                 trash_data, water_data, combined_risk
             )
@@ -88,29 +79,81 @@ class EnvironmentalRiskModel:
             }
             
         except Exception as e:
-            return {
-                "success": False,
-                "error": str(e),
-                "overall_risk_score": 0
-            }
+            return {"success": False, "error": str(e), "overall_risk_score": 0}
     
     def _calculate_trash_risk(self, trash_data: Dict) -> float:
-        """Calculate risk score from trash contamination data"""
         if not trash_data.get("success", False):
-            return 0.1  # Minimal risk if no data
-        
+            return 0.1
         base_risk = 0
         detections = trash_data.get("detections", [])
-        
         for detection in detections:
             trash_type = detection.get("type", "")
             confidence = detection.get("confidence", 0)
             weight = detection.get("estimated_weight", 0)
-            
-            # Risk varies by trash type
             type_risk_multiplier = {
                 "plastic": 1.0,
                 "metal": 1.5,
                 "glass": 1.2,
                 "organic": 0.8
             }.get(trash_type, 1.0)
+            base_risk += confidence * weight * type_risk_multiplier
+        return min(base_risk, 10.0)
+    
+    def _calculate_water_risk(self, water_data: Dict) -> float:
+        if not water_data or not water_data.get("success", False):
+            return 0.05
+        quality_index = water_data.get("quality_index", 1)
+        return max(0.1, (1 - quality_index) * 10)
+    
+    def _assess_proximity_risk(self, location: Tuple[float, float]) -> float:
+        return random.uniform(0, 3)
+    
+    def _assess_environmental_factors(self, location: Tuple[float, float]) -> float:
+        return random.uniform(0, 2)
+    
+    def _calculate_combined_risk(self, trash_risk: float, water_risk: float, 
+                                 proximity_risk: float, environmental_risk: float) -> float:
+        return trash_risk + water_risk + proximity_risk + environmental_risk
+    
+    def _predict_disease_risks(self, trash_data: Dict, water_data: Dict, combined_risk: float) -> List[str]:
+        diseases = []
+        for factor, info in self.disease_risk_factors.items():
+            if random.random() < 0.3:
+                diseases.extend(info["diseases"])
+        return list(set(diseases))
+    
+    def _get_risk_level(self, score: float) -> str:
+        if score < 3: return "low"
+        if score < 6: return "medium"
+        return "high"
+    
+    def _calculate_priority_score(self, combined_risk: float, proximity_risk: float) -> float:
+        return combined_risk * (1 + proximity_risk / 5)
+    
+    def _generate_risk_recommendations(self, combined_risk: float) -> List[str]:
+        if combined_risk < 3: return ["Monitor area"]
+        if combined_risk < 6: return ["Clean area", "Alert local authorities"]
+        return ["Immediate cleanup", "Evacuation if necessary", "Medical intervention"]
+    
+    def _estimate_affected_population(self, location: Tuple[float, float], combined_risk: float) -> int:
+        base_population = random.randint(50, 1000)
+        return int(base_population * (combined_risk / 10))
+    
+    # --- NEW METHOD ---
+    def calculate_environmental_cost(self, trash_data: Dict, water_data: Dict = None) -> Dict:
+        try:
+            trash_risk = self._calculate_trash_risk(trash_data)
+            water_risk = self._calculate_water_risk(water_data) if water_data else 0
+            estimated_cost_usd = (trash_risk * 1000) + (water_risk * 500)
+            return {
+                "estimated_cost_usd": round(estimated_cost_usd, 2),
+                "impact_level": (
+                    "low" if estimated_cost_usd < 500 else
+                    "medium" if estimated_cost_usd < 2000 else
+                    "high"
+                ),
+                "trash_risk_score": trash_risk,
+                "water_risk_score": water_risk
+            }
+        except Exception as e:
+            return {"estimated_cost_usd": 0, "impact_level": "unknown", "error": str(e)}

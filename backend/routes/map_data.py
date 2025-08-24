@@ -1,9 +1,11 @@
+from turtle import distance
 from fastapi import APIRouter, Query, HTTPException
 from fastapi.responses import JSONResponse
 from typing import Optional, List, Dict
 import random
 import json
 from utils.fake_data import generate_trash_hotspots, generate_water_contamination_zones, generate_heatmap_data
+import math
 
 router = APIRouter()
 
@@ -74,8 +76,8 @@ async def get_priority_hotspots(
             distance = random.uniform(0, radius_km)
             
             # Convert to lat/lng offset
-            lat_offset = (distance * 1000) / 111000 * random.choice([-1, 1])
-            lng_offset = (distance * 1000) / (111000 * abs(latitude)) * random.choice([-1, 1])
+            lat_offset = distance / 111 * random.choice([-1, 1])
+            lng_offset = (distance / 111) / max(math.cos(math.radians(latitude)), 0.0001) * random.choice([-1, 1])
             
             hotspot_lat = latitude + lat_offset
             hotspot_lng = longitude + lng_offset
