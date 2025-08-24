@@ -41,6 +41,19 @@ class EnvironmentalRiskModel:
             "population_density", "waste_management_quality"
         ]
     
+    def predict_trash_generation(self, location: tuple, trash_data: dict) -> dict:
+        """
+        Predict future trash generation at a location.
+        Currently a dummy implementation.
+        """
+        # Example: random small prediction values
+        return {
+            "predicted_trash_kg_next_week": round(random.uniform(5, 50), 2),
+            "predicted_trash_kg_next_month": round(random.uniform(20, 200), 2),
+            "confidence": round(random.uniform(0.6, 0.95), 2)
+        }
+    
+    
     def assess_health_risk(self, location: Tuple[float, float], 
                           trash_data: Dict, water_data: Dict = None) -> Dict:
         """
